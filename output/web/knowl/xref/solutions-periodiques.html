@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercice</span><span class="space"> </span><span class="codenumber">7<span class="period">.</span></span><span class="space"> </span><span class="title">Solutions périodiques d’une équation différentielle linéaire.</span>
+</h3>
+<div class="para logical">
+<div class="para">On suppose que <span class="process-math">\(E\)</span> est un espace euclidien. On considère une équation différentielle linéaire homogène</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x' = a(t) \cdot x
+\end{equation*}
+</div>
+<div class="para">On suppose que pour tout <span class="process-math">\(t \in I\text{,}\)</span> <span class="process-math">\(a(t)\)</span> est un endomorphisme antisymétrique.</div>
+<ul class="disc" id="solutions-periodiques-2-5">
+<li><div class="para">Montrer que si <span class="process-math">\(f\)</span> est une solution de <span class="process-math">\((H)\text{,}\)</span> alors <span class="process-math">\(t \longmapsto \|f(t)\|\)</span> est constante.</div></li>
+<li><div class="para">Soit <span class="process-math">\(r\)</span> une solution sur <span class="process-math">\(I\)</span> de l’équation résolvante de <span class="process-math">\((H)\)</span> :<div class="displaymath process-math">
+\begin{equation*}
+u' = a(t) \circ u
+\end{equation*}
+</div>Montrer que s’il existe <span class="process-math">\(t_0 \in I\)</span> tel que <span class="process-math">\(r(t_0)\)</span> soit inversible, alors pour tout <span class="process-math">\((t, s) \in \R^2\text{,}\)</span> <span class="process-math">\(r(t) \circ \big(r(s)\big)^{-1}\)</span> est une isométrie de <span class="process-math">\(E\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical"><ul class="disc" id="solutions-periodiques-3-1-1">
+<li><div class="para">Soit <span class="process-math">\(f\)</span> une solution de <span class="process-math">\((H)\)</span> sur <span class="process-math">\(I\text{.}\)</span> La fonction <span class="process-math">\(\rho : t \longmapsto \|f(t)\|^2\)</span> est alors de classe <span class="process-math">\(\mathcal C^1\)</span> sur <span class="process-math">\(I\)</span> et on a<div class="displaymath process-math">
+\begin{equation*}
+\rho'(t) = 2 \langle f(t), f'(t) \rangle = 2 \langle f(t), a(t) \cdot f(t) \rangle = 0
+\end{equation*}
+</div>Donc <span class="process-math">\(\rho\)</span> est constante sur <span class="process-math">\(I\text{.}\)</span> Ce qui implique que la fonction <span class="process-math">\(t \longmapsto \|f(t)\|\)</span> est constante sur <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+<li><div class="para">Posons pour tout <span class="process-math">\(v \in E\text{,}\)</span> <span class="process-math">\(f_v(t) = r(t) \cdot v\text{.}\)</span> La fonction <span class="process-math">\(f_v\)</span> est dérivable et<div class="displaymath process-math">
+\begin{equation*}
+f_v'(t) = r'(t) \cdot v = a(t) \circ r(t) \cdot v = a(t) \cdot f_v(t)
+\end{equation*}
+</div>Donc <span class="process-math">\(f_v\)</span> est une solution de <span class="process-math">\(x' = a(t) \cdot v\text{.}\)</span> Soit maintenant <span class="process-math">\((v_1, v_2, \ldots, v_d)\)</span> une base de <span class="process-math">\(E\text{.}\)</span> Pour tout <span class="process-math">\(k \in \iic{1, d}\text{,}\)</span> on a <span class="process-math">\(f_{v_k}(t_0) = r(t_0) \cdot v_k\)</span> et comme <span class="process-math">\(r(t_0)\)</span> est inversible, alors <span class="process-math">\((f_{v_1}(t_0), \ldots, f_{v_d}(t_0))\)</span> est une base de <span class="process-math">\(E\text{.}\)</span> La famille <span class="process-math">\((f_{v_1}, \ldots, f_{v_d})\)</span> est donc un système fondamental de solutions de <span class="process-math">\((H)\text{.}\)</span> La famille <span class="process-math">\((r(t) \cdot v_1, \ldots, r(t) \cdot v_d)\)</span> est ainsi une base de <span class="process-math">\(E\)</span> pour tout <span class="process-math">\(t \in I\text{.}\)</span> Ce qui implique que <span class="process-math">\(r(t)\)</span> est inversible pour tout <span class="process-math">\(t \in I\text{.}\)</span> Par ailleurs, pour tout <span class="process-math">\(s \in I\)</span> fixé, il est immédiat que la fonction <span class="process-math">\(t \longmapsto r(t) \circ r(s)^{-1}\)</span> est une solution de <span class="process-math">\((RH)\text{.}\)</span> Donc pour tout <span class="process-math">\(v \in E\text{,}\)</span> la fonction<div class="displaymath process-math">
+\begin{equation*}
+t \longmapsto r(t) \circ r(s)^{-1} \cdot v
+\end{equation*}
+</div>est une solution de <span class="process-math">\((H)\text{.}\)</span> La fonction <span class="process-math">\(t \longmapsto \|r(t) \circ r(s)^{-1} \cdot v\|\)</span> est donc constante. Pour <span class="process-math">\(t = s\text{,}\)</span> elle prend la valeur <span class="process-math">\(\|v\|\)</span> donc<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I,\; \|r(t) \circ r(s)^{-1} \cdot v\| = \|v\|
+\end{equation*}
+</div>Ceci pour tout <span class="process-math">\(v \in E\text{.}\)</span> Alors <span class="process-math">\(r(t) \circ r(s)^{-1}\)</span> est une isométrie de <span class="process-math">\(E\)</span> pour tous <span class="process-math">\(t, s \in I\text{.}\)</span>
+</div></li>
+</ul></div></div></details></article><span class="incontext"><a class="internal" href="sec-eqdiff-exerises-approfondissement.html#solutions-periodiques">Contexte</a></span>
+</body>
+</html>

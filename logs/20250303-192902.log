@@ -1,0 +1,24 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Building target web
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Building with custom xsl /home/GitHub/cpge-eqdiff/xsl/dmoi-html.xsl
+INFO    : Preparing to build into /home/GitHub/cpge-eqdiff/output/web.
+INFO    : discovering source file's directory name: /home/GitHub/cpge-eqdiff/source
+INFO    : verifying and expanding input directory: /home/GitHub/cpge-eqdiff/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/GitHub/cpge-eqdiff/generated-assets
+INFO    : verifying and expanding input directory: /home/GitHub/cpge-eqdiff/source/../assets
+INFO    : input directory expanded to absolute path: /home/GitHub/cpge-eqdiff/assets
+CRITICAL: unable to get Runestone Services from the Runestone CDN.
+This is due to an error reported immediately prior in the log.
+Unable to proceed and build useful HTML output without this.
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

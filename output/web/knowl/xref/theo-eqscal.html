@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Théorème</span><span class="space"> </span><span class="codenumber">26</span><span class="period">.</span><span class="space"> </span><span class="title">Solution d’une EDL scalaire homogène à coefficients constants.</span>
+</h4>
+<div class="para">Soient des scalaires <span class="process-math">\(b_0, b_1, \ldots, b_{p-1} \in \K\text{.}\)</span> On considère l’équation différentielle linéaire scalaire homogène d’ordre <span class="process-math">\(p\)</span> dite à coefficients constants :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^{(p)} + b_{p-1}x^{(p-1)} + \cdots + b_1 x' + b_0 x = 0
+\end{equation*}
+</div>
+<div class="para">On appelle polynôme caractéristique de <span class="process-math">\((H)\)</span> le polynôme :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P = X^p + b_{p-1}X^{p-1} + \cdots + b_1 X + b_0
+\end{equation*}
+</div>
+<aside class="aside aside-like"><h5 class="heading"><span class="title">Remarque.</span></h5>
+<div class="para">Les solutions de <span class="process-math">\((H)\)</span> sont en fait de classe <span class="process-math">\(\mathcal{C}^\infty\)</span> sur <span class="process-math">\(\R\text{.}\)</span>
+</div></aside><ol class="decimal" id="theo-eqscal-7">
+<li>
+<div class="para">Si <span class="process-math">\(P\)</span> est scindé sur <span class="process-math">\(\K\text{,}\)</span> <span class="process-math">\(P = \prod_{k=1}^r (X - \lambda_k)^{\alpha_k}\)</span> où <span class="process-math">\(\lambda_1, \lambda_2, \ldots, \lambda_r\)</span> sont les racines distinctes de <span class="process-math">\(P\text{,}\)</span> alors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_\R(H) = \Big\{ t \mapsto \sum_{k=1}^r Q_k(t) \e^{\lambda_k t} \mid \forall k \in \iic{1, r}, \; Q_k \in \K_{\alpha_k-1}[X] \Big\}
+\end{equation*}
+</div>
+</li>
+<li>
+<div class="para">Si <span class="process-math">\(\K = \R\)</span> mais <span class="process-math">\(P\)</span> n’est pas scindé sur <span class="process-math">\(\R\)</span> :</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P = \prod_{k=1}^s (X - \mu_k)^{\beta_k} \prod_{k=1}^r (X - \lambda_k)^{\alpha_k} (X - \overline{\lambda_k})^{\alpha_k}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(\mu_1, \ldots, \mu_s\)</span> sont les racines réelles éventuelles de <span class="process-math">\(P\)</span> et <span class="process-math">\(\lambda_1, \ldots, \lambda_r\)</span> ses racines complexes non réelles, alors les solutions réelles de <span class="process-math">\((H)\)</span> sur <span class="process-math">\(\R\)</span> sont les fonctions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t \mapsto \sum_{k=1}^s Q_k(t) \e^{\mu_k t} + \sum_{k=1}^r \big( U_k(t) \cos(t \im \lambda_k) + V_k(t) \sin(t \im \lambda_k) \big) \e^{t \re \lambda_k}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(Q_k \in \R_{\beta_k-1}[X]\)</span> et <span class="process-math">\(U_k, V_k \in \R_{\alpha_k-1}[X]\)</span> sont des polynômes quelconques.</div>
+</li>
+</ol>
+<aside class="aside aside-like"><h5 class="heading"><span class="title">Remarque.</span></h5>
+<div class="para">Les solutions réelles de <span class="process-math">\((H)\)</span> sont les parties réelles de ses solutions complexes.</div></aside></article><span class="incontext"><a class="internal" href="eqdiff-scal2.html#theo-eqscal">Contexte</a></span>
+</body>
+</html>

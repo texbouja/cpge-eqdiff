@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-FR" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercices d’approfondissements</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Equations différentielles linéaires">
+<meta property="book:author" content="You">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.9';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d7db380f34a0a67e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
+</head>
+<body id="equadiff-25" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="eqdiff.html"><span class="title">Equations différentielles linéaires:</span> <span class="subtitle">Classes MP/MP*</span></a></h1>
+<p class="byline">You</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Résultats de la recherche: </h2>
+<div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-equations-differentielles-lineaires.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-equations-differentielles-lineaires.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="eqdiff-5.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{empheq}\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\K}{\mathbb K}
+\renewcommand{\Pr}{\mathbb P}
+\newcommand{\Es}{\mathbb E}
+\newcommand{\Va}{\mathbb V}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\ES}{\mathbb E}
+\newcommand{\VA}{\mathbb V}
+\newcommand\Cov{\operatorname{Cov}}
+\newcommand\card{\operatorname{Card}}
+\newcommand\qtext[1]{\quad\text{#1}\quad}
+\renewcommand\llbracket{[\![}
+\renewcommand\rrbracket{]\!]}
+\newcommand\iic[1]{\llbracket #1 \rrbracket}
+\newcommand\id{\mathrm{id}}
+\newcommand\e{\mathbf{e}}
+\newcommand\dt{\mathrm{d}}
+\newcommand\dd[2]{\frac{\partial #1}{\partial #2}}
+\newcommand\func[5]{#1\:\;\begin{array}[t]{rcl}#2 \amp \longrightarrow \amp #3 \\ #4 \amp \longmapsto \amp #5\end{array}}
+\newcommand\fct[2]{#1\longrightarrow#2}
+\newcommand\nm[1]{\left\Vert#1\right\vert}
+\newcommand\nmm[1]{\left\Vert#1\right\Vert}
+\newcommand\tr{\operatorname{Tr}}
+\newcommand\re{\operatorname{Re}}
+\newcommand\rg{\operatorname{rg}}
+\newcommand\OPN[1]{\operatorname{#1}}
+\let\geq\geqslant
+\let\leq\leqslant
+\let\ds\displaystyle
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 focused" data-preexpanded-levels="1" data-max-levels="3"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Pages Liminaires</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-equations-differentielles-lineaires.html" class="internal"><span class="codenumber">1</span> <span class="title">Équation différentielles linéaires</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-equations-differentielles-lineaires.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Équations différentielles linéaires</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equations-differentielles-lineaires.html#sec-equations-differentielles-lineaires-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Solution d’une équation différentielle linéaire du premier ordre</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equations-differentielles-lineaires.html#sec-equations-differentielles-lineaires-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Système fondamental de solutions de l’équation homogène</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equations-differentielles-lineaires.html#sec-varconst" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Méthode de la variation des constantes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-equations-differentielles-lineaires.html#sec-equations-differentielles-lineaires-6" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Équation différentielle linéaire du premier ordre à coefficients constantsExpression de la solution d’un problème de Cauchy</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="ch-equations-differentielles-lineaires-4.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercices d’approfondissements</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="eqdiff-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Thèmes  sur les équations différentielles</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="eqdiff-5-3.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Équation et applications résolvantes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-3.html#eqdiff-5-3-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Équation résolvante de <span class="process-math">\((H)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-3.html#eqdiff-5-3-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Application résolvante de <span class="process-math">\((H)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-3.html#eqdiff-5-3-5" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Résolvante et équation complète</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-3.html#eqdiff-5-3-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Résolvantes d’une équation à coefficients constants</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="eqdiff-5-4.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Thèmes sur les équations scalaires du deuxième ordre</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Solutions développables en séries entières</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Transformation de l’équation homogène <span class="process-math">\((H)\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Problèmes aux limites</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Zéros des solutions d’une EDLS homogène du second ordre</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-6-3" class="internal"><span class="title">Le cas général</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#subsubsec-equations-normales" class="internal"><span class="title">Cas d’une équation normale</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#subsubsec-" class="internal"><span class="title">Cas d’une équation auto-adjointe et déductions sur le cas général</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-exercices.html" class="internal"><span class="codenumber">3</span> <span class="title">Exercices</span></a></div></li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="ch-equations-differentielles-lineaires-4"><h2 class="heading hide-type">
+<span class="type">Exercices</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Exercices d’approfondissements</span>
+</h2>
+<article class="activity project-like" id="lemme-de-gronwall"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 1.1 - </span> <span class="title">Lemme de Gronwall.</span>
+</h6>
+<div class="introduction" id="lemme-de-gronwall-2"><div class="para" id="lemme-de-gronwall-2-1">Soit un intervalle <span class="process-math">\(I\)</span> de <span class="process-math">\(\R\text{.}\)</span> On fixe un point <span class="process-math">\(t_0\)</span> de <span class="process-math">\(I\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="lemme-de-gronwall-3"><h4 class="heading">
+<span class="codenumber">(a)</span><span class="space"> </span><span class="title">Version réelle.</span>
+</h4>
+<div class="para logical" id="lemme-de-gronwall-3-2-1">
+<div class="para">Soit une application continue positive <span class="process-math">\(\varphi : I\longmapsto \R\text{.}\)</span> On suppose qu’il existe <span class="process-math">\(\alpha:I\longrightarrow \R\)</span> continue positive et <span class="process-math">\(M\in\R\)</span> tels que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\in I,\; 
+\varphi(t)\leq M+\Big|\int_{t_0}^t \alpha(s)\varphi(s)\dt s\Big|
+\end{equation*}
+</div>
+<div class="para">Montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\in I,\;
+\varphi(t)\leq M\exp\bigg(\Big|\int_{t_0}^t \alpha(s)\dt s\Big|\bigg)
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="lemme-de-gronwall-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="lemme-de-gronwall-3-3-1">
+<div class="para">On introduit la fonction <span class="process-math">\(\beta\)</span> définie sur <span class="process-math">\(I\)</span> par</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\beta(t)=\bigg(M+\int_{t_0}^t\alpha(s)\varphi(s)\dt s\bigg)
+\exp\bigg({-\!\!\int_{t_0}^t\alpha(s)\dt s}\bigg)
+\end{equation*}
+</div>
+<div class="para">
+<span class="process-math">\(\beta\)</span> est de classe <span class="process-math">\(\mathcal C^1\)</span> et on a</div>
+<div class="displaymath process-math" id="lemme-de-gronwall-3-3-1-6">
+\begin{align*}
+\beta'(t) \amp= \bigg(\alpha(t)\varphi(t)-\alpha(t)\Big(M+\int_{t_0}^t\alpha(s)\varphi(s)\dt s\Big)\bigg)\exp\bigg({-\!\!\int_{t_0}^t\alpha(s)\dt s}\bigg)\\
+\amp= \alpha(t)\bigg(\varphi(t)-\Big(M+\int_{t_0}^t\alpha(s)\varphi(s)\dt s\Big)\bigg)\exp\bigg({-\!\!\int_{t_0}^t\alpha(s)\dt s}\bigg) 
+\end{align*}
+</div>
+<div class="para">Si <span class="process-math">\(t\geq t_0\text{,}\)</span> la fonction <span class="process-math">\(\alpha\)</span> étant positive, on a <span class="process-math">\(\int_{t_0}^t\alpha(s)\dt s=\Big|\int_{t_0}^t\alpha(s)\dt s\Big|\)</span> et donc <span class="process-math">\(\beta'(t)\leq 0\text{.}\)</span> La fonction <span class="process-math">\(\beta\)</span> est donc décroissante sur l’intervalle <span class="process-math">\(I\cap[t_0,+\infty[\text{.}\)</span> Ce qui conduit à <span class="process-math">\(\beta(t)\leq\beta(t_0)=M\)</span> pour tout <span class="process-math">\(t\geq t_0\)</span> et ainsi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\geq t_0,\; M+\int_{t_0}^t\alpha(s)\varphi(s)\dt s\leq 
+M\exp\Big(\int_{t_0}^t\alpha(s)\dt s\Big)
+\end{equation*}
+</div>
+<div class="para">Soit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\geq t_0,\; \varphi(t)\leq M\exp\Big(\int_{t_0}^t\alpha(s)\dt s\Big)
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="lemme-de-gronwall-4"><h4 class="heading">
+<span class="codenumber">(b)</span><span class="space"> </span><span class="title">Version vectorielle.</span>
+</h4>
+<div class="para logical" id="lemme-de-gronwall-4-2-1">
+<div class="para">On considère une fonction continue <span class="process-math">\(f:I\longrightarrow E\text{.}\)</span> On suppose qu’il existe <span class="process-math">\(a:I\longrightarrow \mathcal L(E)\)</span> continue et <span class="process-math">\(M\in\R\)</span> tels que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\in I,\; \nm{f(t)}\leq 
+M+\Big\Vert \int_{t_0}^t a(s)\cdot f(s)\dt s\Big\Vert
+\end{equation*}
+</div>
+<div class="para">Montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\in I,\;\nm{f(t)}\leq 
+M\exp\bigg(\Big|\int_{t_0}^t \nmm{a(s)}\dt s\Big|\bigg)
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="lemme-de-gronwall-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="lemme-de-gronwall-4-3-1">
+<div class="para">Il suffit d’appliquer le résultat précédent aux fonctions continues positives <span class="process-math">\(\varphi:t\longmapsto \nmm{a(t)}\)</span> et <span class="process-math">\(\alpha:t\longmapsto \nm{f(t)}\)</span> en remarquant que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall t\in I,\;\bigg\Vert\int_{t_0}^t a(s)\cdot f(s)\dt s\bigg\Vert\leq
+\bigg|\int_{t_0}^t\nmm{a(s)}\nm{f(s)}\dt s\bigg|
+\end{equation*}
+</div>
+</div></div></details></div></article><article class="task exercise-like" id="lemme-de-gronwall-5"><h4 class="heading">
+<span class="codenumber">(c)</span><span class="space"> </span><span class="title">Application.</span>
+</h4>
+<div class="para" id="lemme-de-gronwall-5-2-1">Utiliser ce résultat pour montrer l’unicité de la solution d’un problème de Cauchy relatif à une <abbr class="acronym">EDL</abbr> du premier ordre.</div>
+<div class="solutions"><details id="lemme-de-gronwall-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="lemme-de-gronwall-5-3-1"></div></div></details></div></article></article><article class="activity project-like" id="expression-solutions-commutatives"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 1.2 - </span> <span class="title">Expression des solutions quand <span class="process-math">\(a(t) \circ a(s) = a(s) \circ a(t)\)</span>.</span>
+</h6>
+<ol class="lower-alpha lower-alpha-level-1" id="expression-solutions-commutatives-2-1">
+<li id="expression-solutions-commutatives-2-1-1"><div class="para logical" id="expression-solutions-commutatives-2-1-1-1">
+<div class="para">On considère une <abbr class="acronym">EDL</abbr> du premier ordre homogène</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x' = a(t) \cdot x
+\end{equation*}
+</div>
+<div class="para">et on suppose que <span class="process-math">\(a(t) \circ a(s) = a(s) \circ a(t)\)</span> pour tous <span class="process-math">\(t, s \in I\text{.}\)</span> On fixe <span class="process-math">\(t_0 \in I\text{.}\)</span> Montrer que les solutions de <span class="process-math">\((H)\)</span> sont les fonctions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t \longmapsto \exp\bigg(\int_{t_0}^t a(s) \, ds\bigg) \cdot v
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(v\)</span> est un vecteur quelconque de <span class="process-math">\(E\text{.}\)</span> Quel est l’unique solution de <span class="process-math">\((H)\)</span> telle que <span class="process-math">\(f(t_0) = x_0\)</span> lorsque <span class="process-math">\(x_0 \in E\)</span> est donnée ?</div>
+</div></li>
+<li id="expression-solutions-commutatives-2-1-2"><div class="para logical" id="expression-solutions-commutatives-2-1-2-1">
+<div class="para">Résoudre sur <span class="process-math">\(\R\)</span> le système différentiel <span class="process-math">\(X' = A(t)X\)</span> lorsque</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(t) = \begin{pmatrix} 0 \amp  1/2 \amp  0 \\ -1/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 + \sin t \end{pmatrix}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+<div class="solutions"><details id="expression-solutions-commutatives-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha lower-alpha-level-1" id="expression-solutions-commutatives-3-1">
+<li id="expression-solutions-commutatives-3-1-1"><div class="para logical" id="expression-solutions-commutatives-3-1-1-1">
+<div class="para">Soit <span class="process-math">\(v \in E\)</span> et considérons les fonctions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A : t \longmapsto \int_{t_0}^t a(s) \, ds \quad \text{et} \quad f : t \longmapsto \e^{A(t)} \cdot v
+\end{equation*}
+</div>
+<div class="para">
+<span class="process-math">\(A\)</span> est dérivable de dérivée <span class="process-math">\(a\)</span> et on a pour tout <span class="process-math">\((t, s) \in I^2\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A'(t) \circ A(t) = \int_{t_0}^t a(t) \circ a(s) \, ds = \int_{t_0}^t a(s) \circ a(t) \, ds = A(t) \circ A'(t)
+\end{equation*}
+</div>
+<div class="para">Un résultat usuel affirme que dans ce cas, l’application <span class="process-math">\(B : t \longmapsto \e^{A(t)}\)</span> est dérivable de dérivée <span class="process-math">\(B'(t) = A'(t) \circ \e^{A(t)}\text{.}\)</span> Ensuite, cela implique que la fonction <span class="process-math">\(f\)</span> est dérivable et que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(t) = A'(t) \circ \e^{A(t)} \cdot v = a(t) \cdot f(t)
+\end{equation*}
+</div>
+<div class="para">La fonction <span class="process-math">\(f\)</span> est donc une solution de <span class="process-math">\((H)\text{.}\)</span> C’est l’unique solution de <span class="process-math">\((H)\)</span> qui vérifie <span class="process-math">\(f(t_0) = v\text{.}\)</span> Le vecteur <span class="process-math">\(v\)</span> étant quelconque dans <span class="process-math">\(E\text{,}\)</span> cela prouve que toutes les solutions de <span class="process-math">\((H)\)</span> sont de la forme de <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div></li>
+<li id="expression-solutions-commutatives-3-1-2"><div class="para logical" id="expression-solutions-commutatives-3-1-2-1">
+<div class="para">La condition <span class="process-math">\(A(t)A(s) = A(s)A(t)\)</span> est bien vérifiée et on a</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^t A(s) \, ds = \begin{pmatrix}
+0 \amp  t/2 \amp  0 \\ -t/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  t - \cos t + 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">et ensuite</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\exp\bigg(\int_0^t A(s) \, ds\bigg) = 
+\begin{pmatrix}
+\cos(t/2) \amp  -\sin(t/2) \amp  0 \\ \sin(t/2) \amp  \cos(t/2) \amp  0 \\ 0 \amp  0 \amp  \e^{t - \cos t + 1}
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">Alors les solutions du système différentiel sont les fonctions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t \longmapsto \lambda_1 \begin{pmatrix} \cos(t/2) \\ \sin(t/2) \\ 0 \end{pmatrix} +
+\lambda_2 \begin{pmatrix} -\sin(t/2) \\ \cos(t/2) \\ 0 \end{pmatrix} +
+\lambda_3 \begin{pmatrix} 0 \\ 0 \\ \e^{t - \cos t} \end{pmatrix}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></details></div></article><article class="activity project-like" id="solutions-bornees"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 1.3 - </span> <span class="title">Solutions bornées d’une équation différentielle linéaire.</span>
+</h6>
+<div class="para logical" id="solutions-bornees-2-1">
+<div class="para">Soit <span class="process-math">\(A \in \mathcal M_d(\C)\text{.}\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="solutions-bornees-2-1-2">
+<li id="solutions-bornees-2-1-2-1"><div class="para logical" id="solutions-bornees-2-1-2-1-1">
+<div class="para">Montrer que l’application <span class="process-math">\(t \longmapsto \e^{t A}\)</span> est bornée sur <span class="process-math">\(\R\)</span> si et seulement si</div>
+<ul class="disc" id="solutions-bornees-2-1-2-1-1-3">
+<li id="solutions-bornees-2-1-2-1-1-3-1"><div class="para" id="p-derived-solutions-bornees-2-1-2-1-1-3-1"><span class="process-math">\(\displaystyle \forall \lambda \in \OPN{Sp}(A),\; \re \lambda \leq 0\)</span></div></li>
+<li id="solutions-bornees-2-1-2-1-1-3-2"><div class="para" id="p-derived-solutions-bornees-2-1-2-1-1-3-2"><span class="process-math">\(\displaystyle \forall \lambda \in \OPN{Sp}(A),\; \re \lambda = 0 \Rightarrow \ker(A - \lambda I)^2 = \ker(A - \lambda I)\)</span></div></li>
+</ul>
+</div></li>
+<li id="solutions-bornees-2-1-2-2"><div class="para" id="solutions-bornees-2-1-2-2-1">Quelles sont les solutions <span class="process-math">\(t \longmapsto \e^{tA}V\)</span> du système différentiel <span class="process-math">\(X' = AX\)</span> qui sont bornées ?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="solutions-bornees-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha lower-alpha-level-1" id="solutions-bornees-3-1">
+<li id="solutions-bornees-3-1-1"><div class="para logical" id="solutions-bornees-3-1-1-1">
+<div class="para">Considérons une formule de trigonalisation <span class="process-math">\(A = PTP^{-1}\)</span> où</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T = \begin{pmatrix}
+\lambda_1 I_{\alpha_1} + N_1 \amp \amp \amp  \\ 
+\amp  \lambda_2 I_{\alpha_2} + N_2 \amp \amp  \\ 
+\amp \amp  \ddots \amp  \\ 
+\amp \amp \amp  \lambda_r I_{\alpha_r} + N_r
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(\lambda_1, \ldots, \lambda_r\)</span> sont les valeurs propres distinctes de <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(\alpha_1, \ldots, \alpha_r\)</span> leurs multiplicités respectives et <span class="process-math">\(N_1, \ldots, N_r\)</span> des matrices nilpotentes. Alors <span class="process-math">\(\e^{tA} = P \e^{tT} P^{-1}\)</span> avec</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\e^{tT} = \begin{pmatrix}
+\e^{\lambda_1 t} \e^{t N_1} \amp \amp \amp  \\ 
+\amp  \e^{\lambda_2 t} \e^{t N_2} \amp \amp  \\ 
+\amp \amp  \ddots \amp  \\ 
+\amp \amp \amp  \e^{\lambda_r t} \e^{t N_r}
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">L’application <span class="process-math">\(t \longmapsto \e^{tA}\)</span> est donc bornée sur <span class="process-math">\(\R\)</span> si et seulement si toutes les applications <span class="process-math">\(t \longmapsto \e^{\lambda_k t} \e^{t N_k}\)</span> le sont. Or si <span class="process-math">\(\lambda \in \C\)</span> et <span class="process-math">\(N\)</span> est une matrice nilpotente d’indice de nilpotence <span class="process-math">\(p\text{,}\)</span> alors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\e^{\lambda t} \e^{t N} = \sum_{k=0}^{p-1} \frac{t^k \e^{\lambda t}}{k!} N^k
+\end{equation*}
+</div>
+<div class="para">Puisque <span class="process-math">\(|t^k \e^{\lambda t}| = t^k \e^{t \re \lambda}\text{,}\)</span> alors la fonction <span class="process-math">\(t \longmapsto t^k \e^{\lambda t}\)</span> est bornée si et seulement si (<span class="process-math">\(k \gt 0\)</span> et <span class="process-math">\(\re \lambda \lt 0\)</span>) ou (<span class="process-math">\(k = 0\)</span> et <span class="process-math">\(\re \lambda \leq 0\)</span>). On en déduit que la fonction <span class="process-math">\(t \longmapsto \e^{\lambda t} \e^{t N}\)</span> est bornée si et seulement si</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(N = 0 \text{ et } \re \lambda = 0) \text{ ou } (N \ne 0 \text{ et } \re \lambda \lt 0)
+\end{equation*}
+</div>
+<div class="para">Et finalement, l’application <span class="process-math">\(t \longmapsto \e^{tA}\)</span> est bornée si et seulement si</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall k \in \iic{1, r},\; \re \lambda_k \leq 0 \quad \text{et} \quad \forall k \in \iic{1, r},\; \re \lambda_k = 0 \Rightarrow N_k = 0
+\end{equation*}
+</div>
+</div></li>
+<li id="solutions-bornees-3-1-2"><div class="para logical" id="solutions-bornees-3-1-2-1">
+<div class="para">Soit <span class="process-math">\(V \in \mathcal M_{n,1}(\C)\)</span> et considérons la solution <span class="process-math">\(f : t \longmapsto \e^{tA} V\text{.}\)</span> Décomposons <span class="process-math">\(V\)</span> sous la forme <span class="process-math">\(V = V_1 + V_2 + \cdots + V_r\)</span> où pour tout <span class="process-math">\(k \in \iic{1, r}\text{,}\)</span> <span class="process-math">\(V_k \in \ker(A - \lambda_k I)^{\alpha_k}\text{.}\)</span> On peut poser pour tout <span class="process-math">\(k \in \iic{1, r}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V_k = P \begin{pmatrix} 0 \\ \vdots \\ W_k \\ \vdots \\ 0 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">On a alors pour tout <span class="process-math">\(t \in \R\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(t) = P \begin{pmatrix}
+\e^{\lambda_1 t} \e^{t N_1} W_1 \\
+\e^{\lambda_2 t} \e^{t N_2} W_2 \\
+\vdots \\
+\e^{\lambda_r t} \e^{t N_r} W_r
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">et donc <span class="process-math">\(f\)</span> est bornée si et seulement si les fonctions <span class="process-math">\(g_k : t \longmapsto \e^{\lambda_k t} \e^{t N_k} W_k\)</span> sont toutes bornées.</div>
+<ul class="disc" id="solutions-bornees-3-1-2-1-13">
+<li id="solutions-bornees-3-1-2-1-13-1"><div class="para" id="p-derived-solutions-bornees-3-1-2-1-13-1">Si <span class="process-math">\(\re \lambda_k \lt 0\text{,}\)</span> alors la matrice <span class="process-math">\(\e^{\lambda_k t} \e^{t N_k}\)</span> est bornée et donc <span class="process-math">\(g_k\)</span> est bornée.</div></li>
+<li id="solutions-bornees-3-1-2-1-13-2"><div class="para" id="p-derived-solutions-bornees-3-1-2-1-13-2">Si <span class="process-math">\(\re \lambda_k = 0\text{,}\)</span> on introduit l’entier <span class="process-math">\(\beta = \max\{j \in \N \;|\; N_k^j W_k \ne 0\}\text{.}\)</span> On peut alors écrire<div class="displaymath process-math">
+\begin{equation*}
+g_k(t) = \sum_{j=0}^{\beta-1} \frac{t^j \e^{\lambda_k t}}{j!} N_k^j W_k
+\end{equation*}
+</div>La fonction <span class="process-math">\(g_k\)</span> est bornée si et seulement si les fonctions <span class="process-math">\(t \longmapsto t^j \e^{\lambda_k t}\)</span> sont bornées. Alors <span class="process-math">\(g_k\)</span> ne peut être bornée que si <span class="process-math">\(\beta = 1\text{,}\)</span> c’est-à-dire si <span class="process-math">\(N_k W_k = 0\)</span> ou encore <span class="process-math">\(V_k \in E_{\lambda_k}(A)\text{.}\)</span>
+</div></li>
+<li id="solutions-bornees-3-1-2-1-13-3"><div class="para" id="p-derived-solutions-bornees-3-1-2-1-13-3">Si <span class="process-math">\(\re \lambda_k \gt 0\text{,}\)</span> alors <span class="process-math">\(t \longmapsto \e^{\lambda_k t}\)</span> n’est pas bornée et donc <span class="process-math">\(g_k\)</span> ne peut être bornée que si <span class="process-math">\(W_k = 0\)</span> ou encore <span class="process-math">\(V_k = 0\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Ainsi, la solution <span class="process-math">\(f : t \longmapsto \e^{tA} V\)</span> de <span class="process-math">\((H)\)</span> est bornée si et seulement si</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V \in \underset{k \in I}{\bigoplus} \ker(A - \lambda_k I)^{\alpha_k} \oplus \underset{k \in J}{\bigoplus} \ker(A - \lambda_k I)
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(I = \{k \in \iic{1, r} \;|\; \re \lambda_k \lt 0\}\)</span> et <span class="process-math">\(J = \{k \in \iic{1, r} \;|\; \re \lambda_k = 0\}\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></details></div></article><article class="activity project-like" id="spectral-mapping-theorem"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 1.4 - </span> <span class="title">Théorème de l’application spectrale.</span>
+</h6>
+<ol class="lower-alpha lower-alpha-level-1" id="spectral-mapping-theorem-3-1">
+<li id="spectral-mapping-theorem-3-1-1"><div class="para" id="spectral-mapping-theorem-3-1-1-1">Montrer que pour toute matrice <span class="process-math">\(M \in \mathcal M_d(\C)\text{,}\)</span> la série <span class="process-math">\(\sum a_n M^n\)</span> converge. On note également <span class="process-math">\(f(M)\)</span> sa somme.</div></li>
+<li id="spectral-mapping-theorem-3-1-2"><div class="para" id="spectral-mapping-theorem-3-1-2-1">Montrer que <span class="process-math">\(\OPN{Sp}\big(f(M)\big) = f\big(\OPN{Sp}(M)\big)\text{.}\)</span>
+</div></li>
+<li id="spectral-mapping-theorem-3-1-3"><div class="para logical" id="spectral-mapping-theorem-3-1-3-1">
+<div class="para">Soit <span class="process-math">\(\mu\)</span> une valeur propre de <span class="process-math">\(f(M)\text{.}\)</span> On suppose que <span class="process-math">\(f'(\lambda) \ne 0\)</span> pour toute valeur propre <span class="process-math">\(\lambda\)</span> de <span class="process-math">\(M\)</span> telle que <span class="process-math">\(f(\lambda) = \mu\text{.}\)</span> Montrer que</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E_\mu\big(f(M)\big) = \bigoplus_{\substack{\lambda \in \OPN{Sp}(M) \\ f(\lambda) = \mu}} E_\lambda(M)
+\end{equation*}
+</div>
+</div></li>
+<li id="spectral-mapping-theorem-3-1-4">
+<div class="para" id="spectral-mapping-theorem-3-1-4-1">On suppose que <span class="process-math">\(f\)</span> induit une injection sur <span class="process-math">\(\OPN{Sp}(M)\text{.}\)</span> Soit <span class="process-math">\(\lambda \in \OPN{Sp}(M)\text{.}\)</span>
+</div>
+<ul class="disc" id="spectral-mapping-theorem-3-1-4-2">
+<li id="spectral-mapping-theorem-3-1-4-2-1"><div class="para" id="p-derived-spectral-mapping-theorem-3-1-4-2-1">Montrer que les valeurs propres <span class="process-math">\(\lambda\)</span> de <span class="process-math">\(M\)</span> et <span class="process-math">\(f(\lambda)\)</span> de <span class="process-math">\(f(M)\)</span> ont la même multiplicité.</div></li>
+<li id="spectral-mapping-theorem-3-1-4-2-2"><div class="para" id="p-derived-spectral-mapping-theorem-3-1-4-2-2">Montrer que si <span class="process-math">\(f'(\lambda) \ne 0\text{,}\)</span> alors<div class="displaymath process-math">
+\begin{equation*}
+\forall k \in \N^*,\; \ker (f(M) - f(\lambda)I)^k = \ker (M - \lambda I)^k
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</li>
+</ol>
+<div class="solutions"><details id="spectral-mapping-theorem-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha lower-alpha-level-1" id="spectral-mapping-theorem-4-1">
+<li id="spectral-mapping-theorem-4-1-1"><div class="para" id="p-derived-spectral-mapping-theorem-4-1-1">Pour tout <span class="process-math">\(n \in \N\text{,}\)</span> on a <span class="process-math">\(\|a_n M^n\| \leq |a_n| \|M\|^n\text{.}\)</span> Puisque la série entière <span class="process-math">\(\sum a_n z^n\)</span> a un rayon de convergence infini, la série <span class="process-math">\(\sum |a_n| \|M\|^n\)</span> converge et donc la série <span class="process-math">\(\sum a_n M^n\)</span> converge absolument.</div></li>
+<li id="spectral-mapping-theorem-4-1-2"><div class="para" id="p-derived-spectral-mapping-theorem-4-1-2">Écrivons une formule de trigonalisation de <span class="process-math">\(M\)</span> : <span class="process-math">\(M = PTP^{-1}\)</span> où<div class="displaymath process-math">
+\begin{equation*}
+T = \begin{pmatrix}
+T_1 \amp \amp \amp  \\ \amp  T_2 \amp \amp  \\ \amp \amp  \ddots \amp  \\ \amp \amp \amp  T_r 
+\end{pmatrix}
+\end{equation*}
+</div>chaque bloc <span class="process-math">\(T_k\)</span> étant triangulaire supérieure avec une même valeur propre <span class="process-math">\(\lambda_k\)</span> de <span class="process-math">\(M\)</span> sur sa diagonale. On peut alors justifier que <span class="process-math">\(f(M) = Pf(T)P^{-1}\)</span> avec<div class="displaymath process-math">
+\begin{equation*}
+f(T) = \begin{pmatrix}
+f(T_1) \amp \amp \amp  \\ \amp  f(T_2) \amp \amp  \\ \amp \amp  \ddots \amp  \\ \amp \amp \amp  f(T_r) 
+\end{pmatrix}
+\end{equation*}
+</div>et <span class="process-math">\(f(T_k)\)</span> est triangulaire supérieure d’éléments diagonaux tous égaux à <span class="process-math">\(f(\lambda_k)\text{.}\)</span> Ainsi,<div class="displaymath process-math">
+\begin{equation*}
+\OPN{Sp}\big(f(M)\big) = f\big(\OPN{Sp}(M)\big)
+\end{equation*}
+</div>
+</div></li>
+<li id="spectral-mapping-theorem-4-1-3"><div class="para" id="p-derived-spectral-mapping-theorem-4-1-3">Posons<div class="displaymath process-math">
+\begin{equation*}
+F_\mu = \bigoplus_{\substack{\lambda \in \OPN{Sp}(M) \\ f(\lambda) = \mu}} E_\lambda(M)
+\end{equation*}
+</div>Soit <span class="process-math">\(\lambda\)</span> une valeur propre de <span class="process-math">\(M\)</span> telle que <span class="process-math">\(f(\lambda) = \mu\text{.}\)</span> On a alors pour tout <span class="process-math">\(V \in E_\lambda(M)\)</span><div class="displaymath process-math">
+\begin{equation*}
+f(M)V = \sum_{n=0}^{+\infty} a_n M^n V = \sum_{n=0}^{+\infty} a_n \lambda^n V = f(\lambda)V
+\end{equation*}
+</div>Ainsi, <span class="process-math">\(E_\lambda(M) \subset E_\mu\big(f(M)\big)\text{.}\)</span> Par suite, <span class="process-math">\(F_\mu \subset E_\mu\big(f(M)\big)\text{.}\)</span> La réciproque nécessite le recours à la réduction de Jordan. Examinons ce qui se passe avec une cellule de Jordan <span class="process-math">\(J_p(\lambda) = \lambda I_p + N_p\)</span> dans la décomposition de <span class="process-math">\(M\text{.}\)</span> Pour tout <span class="process-math">\(n \in \N\text{,}\)</span> on peut écrire<div class="displaymath process-math">
+\begin{equation*}
+J_p(\lambda)^n = \sum_{k=0}^{p-1} \lambda^{n-k} \binom{n}{k} N_p^k
+\end{equation*}
+</div>Avec la convention <span class="process-math">\(\binom{n}{k} = 0\)</span> si <span class="process-math">\(k \gt n\text{.}\)</span> Pour chaque <span class="process-math">\(k \lt p\text{,}\)</span> on a<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k} \lambda^{n-k} = \frac{n(n-1)\cdots(n-k+1)}{k!} \lambda^{n-k}
+\end{equation*}
+</div>Donc la série <span class="process-math">\(\sum \binom{n}{k} a_n \lambda^{n-k}\)</span> est convergente de somme <span class="process-math">\(\frac{f^{(k)}(\lambda)}{k!}\text{.}\)</span> Par linéarité de la somme d’une série convergente, on a donc<div class="displaymath process-math">
+\begin{equation*}
+f\big(J_p(\lambda)\big) = \sum_{n=0}^{+\infty} a_n J_p(\lambda)^n = \sum_{k=0}^{p-1} \frac{f^{(k)}(\lambda)}{k!} N_p^k
+\end{equation*}
+</div>Concrètement, <span class="process-math">\(f\big(J_p(\lambda)\big)\)</span> est de la forme<div class="displaymath process-math">
+\begin{equation*}
+\left(\begin{array}{cccccc}
+f(\lambda) \amp  f^{\prime}(\lambda) \amp  * \amp  \cdots \amp  * \amp  * \\
+0 \amp  f(\lambda) \amp  f^{\prime}(\lambda) \amp  \cdots \amp  * \amp  * \\
+0 \amp  0 \amp  f(\lambda) \amp  \cdots \amp  * \amp  * \\
+\vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \amp  \vdots \\
+0 \amp  0 \amp  0 \amp  \cdots \amp  f(\lambda) \amp  f^{\prime}(\lambda) \\
+0 \amp  0 \amp  0 \amp  \cdots \amp  0 \amp  f(\lambda)
+\end{array}\right)
+\end{equation*}
+</div>Ainsi, <span class="process-math">\(f\big(J_p(\lambda)\big) - \mu J_p\)</span> est triangulaire supérieure stricte et tous les coefficients sur sa deuxième diagonale supérieure valent <span class="process-math">\(f'(\lambda) \ne 0\text{.}\)</span> Elle est donc échelonnée de rang <span class="process-math">\(p-1\text{.}\)</span> Si on écrit maintenant <span class="process-math">\(M = QTQ^{-1}\)</span> où <span class="process-math">\(T\)</span> est la réduite de Jordan de <span class="process-math">\(M\text{,}\)</span> alors <span class="process-math">\(f(M) - \mu I_d = Q\big(f(T) - \mu I_d\big)Q^{-1}\text{.}\)</span> Soit <span class="process-math">\(J_{p_1}(\lambda_1'), \ldots, J_{p_s}(\lambda_s')\)</span> la liste de toutes les cellules de Jordan de <span class="process-math">\(T\)</span> qui correspondent à des valeurs propres de <span class="process-math">\(M\)</span> telle que <span class="process-math">\(f(\lambda_k') = \mu\)</span> et soit <span class="process-math">\(J\)</span> le bloc diagonal qui regroupe toutes les autres cellules et dont la taille sera notée <span class="process-math">\(q\text{,}\)</span> quitte à réordonner toutes les cellules de <span class="process-math">\(T\text{,}\)</span> on peut écrire<div class="displaymath process-math">
+\begin{equation*}
+f(T) - \mu I_d = \begin{pmatrix}
+f(J_{p_1}\big(\lambda_1')\big) - \mu I_{p_1} \amp \amp \amp  \\
+\amp  \ddots \amp \amp  \\
+\amp \amp  f(J_{p_s}\big(\lambda_s')\big) - \mu I_{p_s} \amp  \\
+\amp \amp \amp  f(J) - \mu I_{q}
+\end{pmatrix}
+\end{equation*}
+</div>Le bloc <span class="process-math">\(f(J) - \mu I_q\)</span> est inversible car <span class="process-math">\(\mu\)</span> ne figure pas dans la diagonale de <span class="process-math">\(f(J)\text{.}\)</span> Donc<div class="displaymath process-math">
+\begin{equation*}
+\rg\big(f(M) - \mu I_d\big) = d - s
+\end{equation*}
+</div>D’un autre côté, pour chaque valeur propre <span class="process-math">\(\lambda\)</span> de <span class="process-math">\(M\text{,}\)</span> le nombre de cellules de Jordan de <span class="process-math">\(M\)</span> relative à <span class="process-math">\(\lambda\)</span> est égal à <span class="process-math">\(\dim E_{\lambda}(M)\text{.}\)</span> Ce qui prouve que <span class="process-math">\(s = \dim F_\mu\)</span> et ainsi<div class="displaymath process-math">
+\begin{equation*}
+\dim F_\mu = \dim E_\mu\big(f(M)\big)
+\end{equation*}
+</div>En conclusion,<div class="displaymath process-math">
+\begin{equation*}
+E_\mu\big(f(M)\big) = F_\mu = \bigoplus_{\substack{\lambda \in \OPN{Sp}(M) \\ f(\lambda) = \mu}} E_\lambda(M)
+\end{equation*}
+</div>
+</div></li>
+<li id="spectral-mapping-theorem-4-1-4"><div class="para" id="p-derived-spectral-mapping-theorem-4-1-4"><ul class="disc" id="spectral-mapping-theorem-4-1-4-1">
+<li id="spectral-mapping-theorem-4-1-4-1-1"><div class="para" id="p-derived-spectral-mapping-theorem-4-1-4-1-1">Reprenons l’expression de <span class="process-math">\(\chi_{f(M)}\)</span> donnée précédemment<div class="displaymath process-math">
+\begin{equation*}
+\chi_{f(M)} = \prod_{k=1}^r (X - f(\lambda_k))^{\alpha_k}
+\end{equation*}
+</div>où <span class="process-math">\(\alpha_k\)</span> est la multiplicité de la valeur propre <span class="process-math">\(\lambda_k\)</span> de <span class="process-math">\(M\text{.}\)</span> Puisque on a supposé que <span class="process-math">\(f\)</span> induit une injection sur <span class="process-math">\(\OPN{Sp}(M)\text{,}\)</span> alors les nombres <span class="process-math">\(f(\lambda_k)\)</span> sont distincts et donc <span class="process-math">\(f(\lambda_k)\)</span> est une racine de multiplicité <span class="process-math">\(\alpha_k\)</span> de <span class="process-math">\(\chi_{f(M)}\text{.}\)</span>
+</div></li>
+<li id="spectral-mapping-theorem-4-1-4-1-2"><div class="para" id="p-derived-spectral-mapping-theorem-4-1-4-1-2">On suppose que <span class="process-math">\(f'(\lambda) \ne 0\text{.}\)</span> Il va falloir passer encore par la réduction de Jordan de la matrice <span class="process-math">\(M\text{.}\)</span>
+</div></li>
+</ul></div></li>
+</ol></div></details></div></article><article class="activity project-like" id="application-resolvante"><h6 class="heading">
+<span class="type">Activité</span><span class="codenumber"> 1.5 - </span> <span class="title">Application résolvante d’une équation différentielle linéaire.</span>
+</h6>
+<div class="para logical" id="application-resolvante-2">
+<div class="para">On appelle équation résolvante de <span class="process-math">\((E)\text{,}\)</span> l’équation différentielle linéaire homogène d’ordre 1</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u' = a(t) \circ u
+\end{equation*}
+</div>
+<div class="para">l’inconnue <span class="process-math">\(u\)</span> étant une application de classe <span class="process-math">\(\mathcal C^1\)</span> de <span class="process-math">\(I\)</span> dans <span class="process-math">\(\mathcal L(E)\text{.}\)</span> On appelle application résolvante de <span class="process-math">\((H)\)</span> l’application définie sur <span class="process-math">\(I^2\)</span> par</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\forall (t, s) \in I^2 \qquad R(t, s) = r_s(t)
+\end{equation*}
+</div>
+<div class="para">où <span class="process-math">\(r_s\)</span> est l’unique solution de <span class="process-math">\((RH)\)</span> qui vérifie <span class="process-math">\(r_s(s) = \id_E\text{.}\)</span>
+</div>
+<ul class="disc" id="application-resolvante-2-13">
+<li id="application-resolvante-2-13-1"><div class="para" id="p-derived-application-resolvante-2-13-1">Montrer que pour tout <span class="process-math">\((t, s, \sigma) \in I^3\text{,}\)</span> <span class="process-math">\(R(t, s) \circ R(s, \sigma) = R(t, \sigma)\text{.}\)</span> En déduire que <span class="process-math">\(R(t, s)\)</span> est inversible et que <span class="process-math">\(R(t, s)^{-1} = R(s, t)\text{.}\)</span>
+</div></li>
+<li id="application-resolvante-2-13-2"><div class="para" id="p-derived-application-resolvante-2-13-2">Exprimer les solutions de <span class="process-math">\((RH)\)</span> et celles de <span class="process-math">\((H)\)</span> en fonction de <span class="process-math">\(R\text{.}\)</span>
+</div></li>
+<li id="application-resolvante-2-13-3"><div class="para" id="p-derived-application-resolvante-2-13-3">Donner l’expression de <span class="process-math">\(R(t, s)\)</span> dans le cas où l’application <span class="process-math">\(a\)</span> est constante.</div></li>
+<li id="application-resolvante-2-13-4"><div class="para" id="p-derived-application-resolvante-2-13-4">Montrer que si <span class="process-math">\(a(t) \circ a(s) = a(s) \circ a(t)\)</span> pour tout <span class="process-math">\(t, s \in I\text{,}\)</span> alors<div class="displaymath process-math">
+\begin{equation*}
+R(t, s) = \exp\bigg(\int_s^t a(\theta) \, d\theta\bigg)
+\end{equation*}
+</div>
+</div></li>
+<li id="application-resolvante-2-13-5"><div class="para" id="p-derived-application-resolvante-2-13-5">On fixe <span class="process-math">\(t_0 \in I\)</span> et on considère l’application <span class="process-math">\(r : t \longmapsto R(t, t_0)\text{.}\)</span> Vérifier que pour tout <span class="process-math">\((t, s) \in I^2\text{,}\)</span> <span class="process-math">\(R(t, s) = r(t) \circ r(s)^{-1}\)</span> et en déduire que <span class="process-math">\(R\)</span> est de classe <span class="process-math">\(\mathcal C^1\)</span> sur <span class="process-math">\(I^2\)</span> avec<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial R}{\partial t}(t, s) = a(t) \circ R(t, s) \quad \text{et} \quad \frac{\partial R}{\partial s}(t, s) = -R(t, s) \circ a(s)
+\end{equation*}
+</div>
+</div></li>
+<li id="application-resolvante-2-13-6"><div class="para" id="p-derived-application-resolvante-2-13-6">On suppose que <span class="process-math">\(a\)</span> est bornée et on pose <span class="process-math">\(M = \sup\limits_{s \in I} \|a(s)\|\text{.}\)</span> Montrer que<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I,\; \|R(t, t_0) - \id_E\| \leq \e^{M|t - t_0|} - 1
+\end{equation*}
+</div>En déduire que pour toute solution <span class="process-math">\(f\)</span> de l’équation homogène <span class="process-math">\((H)\)</span><div class="displaymath process-math">
+\begin{equation*}
+\|f(t) - f(t_0)\| \leq \big(\e^{M|t - t_0|} - 1\big) \|f(t_0)\|
+\end{equation*}
+</div>
+</div></li>
+<li id="application-resolvante-2-13-7"><div class="para" id="p-derived-application-resolvante-2-13-7">Soit <span class="process-math">\(x_0 \in E\text{.}\)</span> Montrer que l’unique solution <span class="process-math">\(g\)</span> de l’équation complète <span class="process-math">\((E)\)</span> telle que <span class="process-math">\(g(t_0) = x_0\)</span> est donnée par la formule de Duhamel :<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I \quad g(t) = R(t, t_0) x_0 + \int_{t_0}^t R(t, s) \cdot b(s) \, ds
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div>
+<details id="application-resolvante-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="application-resolvante-3-1"><ul class="disc" id="application-resolvante-3-1-1">
+<li id="application-resolvante-3-1-1-1"><div class="para" id="p-derived-application-resolvante-3-1-1-1">Pour <span class="process-math">\(s \in I\)</span> fixé, la fonction <span class="process-math">\(t \longmapsto R(t, s)\)</span> est par définition l’unique solution de <span class="process-math">\((RH)\)</span> qui prend la valeur <span class="process-math">\(\id_E\)</span> en <span class="process-math">\(t = s\text{.}\)</span> Si on fixe <span class="process-math">\(s\)</span> et <span class="process-math">\(\sigma\)</span> dans <span class="process-math">\(I\text{,}\)</span> les fonctions <span class="process-math">\(u : t \longmapsto R(t, s) \circ R(s, \sigma)\)</span> et <span class="process-math">\(v : t \longmapsto R(t, \sigma)\)</span> sont des solutions de <span class="process-math">\((RH)\)</span> et on a <span class="process-math">\(u(s) = v(s) = R(s, \sigma)\text{.}\)</span> On a donc <span class="process-math">\(u = v\)</span> d’après le théorème de Cauchy-Lipschitz, soit <span class="process-math">\(R(t, s) \circ R(s, \sigma) = R(t, \sigma)\)</span> pour tout <span class="process-math">\(t \in I\text{.}\)</span> En particulier lorsque <span class="process-math">\(\sigma = t\text{,}\)</span> on obtient <span class="process-math">\(R(t, s) \circ R(s, t) = R(t, t) = \id_E\)</span> donc <span class="process-math">\(R(t, s)\)</span> est inversible d’inverse <span class="process-math">\(R(s, t)\text{.}\)</span>
+</div></li>
+<li id="application-resolvante-3-1-1-2"><div class="para" id="p-derived-application-resolvante-3-1-1-2">Fixons <span class="process-math">\(t_0 \in I\text{.}\)</span> Pour tout <span class="process-math">\(u_0 \in \mathcal L(E)\text{,}\)</span> l’unique solution <span class="process-math">\(u\)</span> de <span class="process-math">\((RH)\)</span> telle que <span class="process-math">\(u(t_0) = u_0\)</span> est donnée par <span class="process-math">\(u(t) = R(t, t_0) \circ u_0\text{.}\)</span> Pour tout <span class="process-math">\(x_0 \in E\text{,}\)</span> l’unique solution <span class="process-math">\(f\)</span> de <span class="process-math">\((H)\)</span> telle que <span class="process-math">\(f(t_0) = x_0\)</span> est donnée par <span class="process-math">\(f(t) = R(t, t_0) \cdot x_0\text{.}\)</span>
+</div></li>
+<li id="application-resolvante-3-1-1-3"><div class="para" id="p-derived-application-resolvante-3-1-1-3">On suppose que <span class="process-math">\(a\)</span> est constante. Pour tout <span class="process-math">\(s \in I\text{,}\)</span> l’unique solution <span class="process-math">\(f\)</span> de <span class="process-math">\((H)\)</span> telle que <span class="process-math">\(f(s) = x_0\)</span> est donnée par <span class="process-math">\(f(t) = \e^{(t - s)a} \cdot x_0\text{.}\)</span> On a donc<div class="displaymath process-math">
+\begin{equation*}
+\forall (t, s) \in I,\; \forall x_0 \in E,\; R(t, s) \cdot x_0 = \e^{(t - s)a} \cdot x_0
+\end{equation*}
+</div>Ce qui implique que <span class="process-math">\(R(t, s) = \e^{(t - s)a}\text{.}\)</span>
+</div></li>
+<li id="application-resolvante-3-1-1-4"><div class="para" id="p-derived-application-resolvante-3-1-1-4">On suppose donc que <span class="process-math">\(a(t)\)</span> et <span class="process-math">\(a(s)\)</span> commutent pour tout <span class="process-math">\(t, s \in I\text{.}\)</span> Posons alors<div class="displaymath process-math">
+\begin{equation*}
+U(t, s) = \exp\bigg(\int_s^t a(\theta) \, d\theta\bigg)
+\end{equation*}
+</div>Fixons <span class="process-math">\(s \in I\)</span> et considérons la fonction <span class="process-math">\(r : t \longmapsto U(t, s)\text{.}\)</span> L’application <span class="process-math">\(r\)</span> est dérivable sur <span class="process-math">\(I\)</span> et on a<div class="displaymath process-math">
+\begin{equation*}
+r'(t) = a(t) \circ \exp\bigg(\int_s^t a(\theta) \, d\theta\bigg) = a(t) \circ r(t)
+\end{equation*}
+</div>
+<span class="process-math">\(r\)</span> est donc une solution de <span class="process-math">\((RH)\)</span> sur <span class="process-math">\(I\text{.}\)</span> Notons par ailleurs que <span class="process-math">\(r(s) = \id_E\text{.}\)</span> Donc par définition de <span class="process-math">\(R\text{,}\)</span> on a<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I,\; U(t, s) = R(t, s)
+\end{equation*}
+</div>Ces égalités sont valables pour tout <span class="process-math">\(s \in I\)</span> donc <span class="process-math">\(R = U\text{.}\)</span>
+</div></li>
+<li id="application-resolvante-3-1-1-5"><div class="para" id="p-derived-application-resolvante-3-1-1-5">
+<span class="process-math">\(r\)</span> est l’unique solution de <span class="process-math">\((RH)\)</span> telle que <span class="process-math">\(r(t_0) = \id_E\text{.}\)</span> Soient <span class="process-math">\(r, s \in I\text{.}\)</span> On a <span class="process-math">\(R(t, s) = R(t, t_0) \circ R(s, t_0)^{-1} = r(t) \circ r(s)^{-1}\text{.}\)</span> Les fonctions <span class="process-math">\(t \longmapsto R(t, s)\)</span> et <span class="process-math">\(s \longmapsto R(t, s)\)</span> sont donc dérivables et on a<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial R}{\partial t}(t, s) = r'(t) \circ r(s)^{-1} = a(t) \circ r(t) \circ r(s)^{-1} = a(t) \circ R(t, s)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial R}{\partial s}(t, s) = r(t) \circ \frac{d}{ds} r(s)^{-1} = -r(t) \circ \big(r(s)^{-1} \circ r'(s) \circ r(s)^{-1}\big) = -R(t, s) \circ a(s)
+\end{equation*}
+</div>
+</div></li>
+<li id="application-resolvante-3-1-1-6"><div class="para" id="p-derived-application-resolvante-3-1-1-6">On a<div class="displaymath process-math">
+\begin{equation*}
+R(t, t_0) - \id_E = r(t) - r(t_0) = \int_{t_0}^t a(s) \circ r(s) \, ds
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r(t) - r(t_0) = \int_{t_0}^t a(s) \circ \big(\id_E + (r(s) - r(t_0))\big) \, ds
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\|r(t) - r(t_0)\| \leq M \bigg|\int_{t_0}^t \big(1 + \|r(s) - r(t_0)\|\big) \, ds\bigg|
+\end{equation*}
+</div>On introduit maintenant la fonction réelle continue <span class="process-math">\(\varphi\)</span> définie par<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I,\; \varphi(t) = 1 + \|r(t) - r(t_0)\|
+\end{equation*}
+</div>Si <span class="process-math">\(t \gt t_0\text{,}\)</span> on a d’après l’inégalité précédente<div class="displaymath process-math">
+\begin{equation*}
+\varphi(t) \leq 1 + M \int_{t_0}^t \varphi(s) \, ds
+\end{equation*}
+</div>En posant<div class="displaymath process-math">
+\begin{equation*}
+\psi(t) = \e^{-M(t - t_0)} \bigg(\frac{1}{M} + \int_{t_0}^t \varphi(s) \, ds\bigg)
+\end{equation*}
+</div>on a<div class="displaymath process-math">
+\begin{equation*}
+\psi'(t) = \bigg(\varphi(t) - 1 - M \int_{t_0}^t \varphi(s) \, ds\bigg) \e^{-M(t - t_0)} \leq 0
+\end{equation*}
+</div>Et donc <span class="process-math">\(\psi\)</span> est décroissante sur <span class="process-math">\(I \cap [t_0, +\infty[\text{.}\)</span> Comme <span class="process-math">\(\psi(t_0) = \frac{1}{M}\text{,}\)</span> alors <span class="process-math">\(\psi(t) \leq \frac{1}{M}\)</span> sur <span class="process-math">\(I \cap [t_0, +\infty[\text{.}\)</span> Ainsi<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I \cap [t_0, +\infty[,\; \varphi(t) \leq \e^{M(t - t_0)}
+\end{equation*}
+</div>et donc<div class="displaymath process-math">
+\begin{equation*}
+\forall t \in I \cap [t_0, +\infty[,\; \|r(t) - r(t_0)\| \leq \e^{M(t - t_0)} - 1
+\end{equation*}
+</div>Si <span class="process-math">\(f\)</span> est une solution de <span class="process-math">\((H)\text{,}\)</span> alors <span class="process-math">\(f(t) = r(t) \cdot f(t_0)\)</span> et donc<div class="displaymath process-math">
+\begin{equation*}
+\|f(t) - f(t_0)\| = \|(r(t) - r(t_0)) \cdot f(t_0)\| \leq \big(\e^{M|t - t_0|} - 1\big) \|f(t_0)\|
+\end{equation*}
+</div>
+</div></li>
+<li id="application-resolvante-3-1-1-7"><div class="para" id="p-derived-application-resolvante-3-1-1-7">Les solutions de l’équation homogène s’écrivent sous la forme <span class="process-math">\(f(t) = R(t, t_0) \cdot v\)</span> où <span class="process-math">\(v\)</span> est un vecteur quelconque de <span class="process-math">\(E\text{.}\)</span> La variation des constantes revient donc à faire varier le vecteur <span class="process-math">\(v\text{.}\)</span> Posons donc <span class="process-math">\(x(t) = R(t, t_0) \cdot v(t)\text{.}\)</span> On a alors<div class="displaymath process-math">
+\begin{equation*}
+(E) \Longleftrightarrow R(t, t_0) \cdot v'(t) = b(t) \Longleftrightarrow v'(t) = R(t_0, t) \cdot b(t)
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\exists v_0 \in E \;|\; v(t) = v_0 + \int_{t_0}^t R(t_0, s) \cdot b(s) \, ds
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\exists v_0 \in E \;|\; x(t) = R(t, t_0) \cdot v_0 + \int_{t_0}^t R(t, s) \cdot b(s) \, ds
+\end{equation*}
+</div>Dans cette dernière expression de <span class="process-math">\(x(t)\text{,}\)</span> on a <span class="process-math">\(x(t_0) = v_0\)</span> donc<div class="displaymath process-math">
+\begin{equation*}
+L'unique solution  de  qui vérifie  est donnée par la formule de Duhamel :
+\forall t \in I,\; f(t) = R(t, t_0) \cdot x_0 + \int_{t_0}^t R(t, s) \cdot b(s) \, ds
+\end{equation*}
+</div>
+</div></li>
+</ul></div></div></details></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-equations-differentielles-lineaires.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="eqdiff-5.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="feedback-link" href="ibouja@gmail.com" target="_blank">Commentaires</a><a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

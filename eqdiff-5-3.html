@@ -222,9 +222,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Transformation de l’équation homogène <span class="process-math">\((H)\)</span></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Problèmes aux limites</span></a></div></li>
 <li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-6" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Zéros des solutions d’une EDLS homogène du second ordre</span></a></div>
+<div class="toc-title-box"><a href="eqdiff-5-4.html#sec-zeros-des-solutions" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Zéros des solutions d’une EDLS homogène du second ordre</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#eqdiff-5-4-6-3" class="internal"><span class="title">Le cas général</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#sec-zeros-des-solutions-3" class="internal"><span class="title">Le cas général</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#subsubsec-equations-normales" class="internal"><span class="title">Cas d’une équation normale</span></a></div></li>
 <li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="eqdiff-5-4.html#subsubsec-" class="internal"><span class="title">Cas d’une équation auto-adjointe et déductions sur le cas général</span></a></div></li>
 </ul>
@@ -376,30 +376,25 @@ eBookConfig.enable_chatcodes =  false;
 </ol></section><section class="subsection" id="eqdiff-5-3-6"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">Résolvante et équation complète</span>
 </h3>
-<ol class="decimal" id="eqdiff-5-3-6-2">
-<li id="eqdiff-5-3-6-2-1">
-<span class="heading"><span class="title">Variation des constantes.</span></span><div class="para logical" id="eqdiff-5-3-6-2-1-2">
+<section class="paragraphs" id="eqdiff-5-3-6-2"><h4 class="heading"><span class="title">Variation des constantes.</span></h4>
+<div class="para logical" id="eqdiff-5-3-6-2-2">
 <div class="para">Sachant que les solutions de <span class="process-math">\((H)\)</span> sont les fonctions <span class="process-math">\(t\longmapsto r(t)\cdot e\)</span> où <span class="process-math">\(e\)</span> est un vecteur quelconque de <span class="process-math">\(E\text{,}\)</span> la méthode de la variation des constantes revient donc à faire varier le vecteur <span class="process-math">\(e\text{.}\)</span> On pose donc <span class="process-math">\(x(t)=r(t)\cdot e(t)\text{.}\)</span> Alors</div>
-<div class="displaymath process-math" id="eqdiff-5-3-6-2-1-2-7">
+<div class="displaymath process-math" id="eqdiff-5-3-6-2-2-7">
 \begin{equation}
 (E)\Longleftrightarrow r(t)\cdot e'(t)=b(t)\Longleftrightarrow e'(t)=r(t)^{-1}\cdot b(t)\tag{2.6}
 \end{equation}
 </div>
 <div class="para">Ce qui permet en théorie de calculer <span class="process-math">\(e'\)</span> et donc <span class="process-math">\(e\text{.}\)</span>
 </div>
-</div>
-</li>
-<li id="eqdiff-5-3-6-2-2">
-<span class="heading"><span class="title">Formule de Duhammel.</span></span><div class="para" id="eqdiff-5-3-6-2-2-2">Soit <span class="process-math">\((t_0,x_0)\in I\times E\text{.}\)</span> L’unique solution <span class="process-math">\(f\)</span> de <span class="process-math">\((E)\)</span> vérifiant la condition initiale <span class="process-math">\(f(t_0)=x_0\)</span> est donnée par la formule dite de Duhammel :</div>
+</div></section><section class="paragraphs" id="eqdiff-5-3-6-3"><h4 class="heading"><span class="title">Formule de Duhammel.</span></h4>
+<div class="para" id="eqdiff-5-3-6-3-2">Soit <span class="process-math">\((t_0,x_0)\in I\times E\text{.}\)</span> L’unique solution <span class="process-math">\(f\)</span> de <span class="process-math">\((E)\)</span> vérifiant la condition initiale <span class="process-math">\(f(t_0)=x_0\)</span> est donnée par la formule dite de Duhammel :</div>
 <div class="displaymath process-math" id="formule-duhammel">
 \begin{equation}
 \forall t\in\R,\; f(t)=R(t,t_0)\cdot x_0+\int_{t_0}^tR(t,s)\cdot b(s)\mathrm{d} s\tag{2.7}
 \end{equation}
 </div>
-<div class="para" id="eqdiff-5-3-6-2-2-4">Dans cette expression de <span class="process-math">\(f(t)\text{,}\)</span> l’intégrale représente une solution particulière de l’équation <span class="process-math">\((E)\text{,}\)</span> la solution qui à l’instant <span class="process-math">\(t_0\)</span> passe par le vecteur nul. L’autre partie est la solution de l’équation homogène <span class="process-math">\((H)\)</span> qui à l’instant <span class="process-math">\(t_0\)</span> passe par le point <span class="process-math">\(x_0\text{.}\)</span>
-</div>
-</li>
-</ol></section><section class="subsection" id="eqdiff-5-3-7"><h3 class="heading hide-type">
+<div class="para" id="eqdiff-5-3-6-3-4">Dans cette expression de <span class="process-math">\(f(t)\text{,}\)</span> l’intégrale représente une solution particulière de l’équation <span class="process-math">\((E)\text{,}\)</span> la solution qui à l’instant <span class="process-math">\(t_0\)</span> passe par le vecteur nul. L’autre partie est la solution de l’équation homogène <span class="process-math">\((H)\)</span> qui à l’instant <span class="process-math">\(t_0\)</span> passe par le point <span class="process-math">\(x_0\text{.}\)</span>
+</div></section></section><section class="subsection" id="eqdiff-5-3-7"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="space"> </span><span class="title">Résolvantes d’une équation à coefficients constants</span>
 </h3>
 <div class="para" id="eqdiff-5-3-7-2">On suppose ici que l’application <span class="process-math">\(a\)</span> est constante. L’équation résolvante de <span class="process-math">\((E)\)</span> est</div>
@@ -430,7 +425,7 @@ r:t\longmapsto \e^{ta}\tag{2.9}
 </ol></section><section class="subsection" id="eqdiff-5-3-8"><h3 class="heading hide-type">
 <span class="type">Sous-section</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="space"> </span><span class="title">Solutions périodiques d’une EDL périodique</span>
 </h3>
-<div class="para" id="eqdiff-5-3-8-2">Voir <a href="sec-eqdiff-exerises-approfondissement.html#solutions-periodiques" class="xref" data-knowl="./knowl/xref/solutions-periodiques.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 1.4.7: Solutions périodiques d’une équation différentielle linéaire">Exercice 1.4.7</a> et <a href="sec-eqdiff-exerises-approfondissement.html#sysdiff-solutions-periodiques" class="xref" data-knowl="./knowl/xref/sysdiff-solutions-periodiques.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 1.4.9: Solutions périodiques d’un système différentiel périodique">Exercice 1.4.9</a>
+<div class="para" id="eqdiff-5-3-8-2">Voir <a href="sec-eqdiff-exerises-approfondissement.html#sysdiff-solutions-periodiques" class="xref" data-knowl="./knowl/xref/sysdiff-solutions-periodiques.html" data-reveal-label="Dévoiler" data-close-label="Fermer" title="Exercice 1.4.8: Solutions périodiques d’un système différentiel périodique">Exercice 1.4.8</a>
 </div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="eqdiff-5.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="eqdiff-5-4.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

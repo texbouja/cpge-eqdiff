@@ -3,18 +3,7 @@
 <chapter xml:id="ch-eqdiff-cours" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Cours</title>
 
-  <introduction>
-    <title>Conventions et notations</title>
-        <p>
-            <ul>
-                <li><m>E</m> désignera un <m>\K</m>-evn de dimension finie non nulle <m>d</m>.</li>
-                <li>On fixe une base <m>\mathcal B=(e_1,e_2,\ldots,e_d)</m> de <m>E</m>.</li>
-                <li><m>I</m> sera un intervalle non trivial de <m>\R</m>.</li>
-                <li>On notera <m>\mathcal C^k(I,E)</m> l'ensemble des fonctions de classe <m>\mathcal C^k</m> de <m>I</m> dans <m>E</m>.</li>
-                <li>Pour tout <m>u\in\mathcal L(E)</m> et <m>h\in E</m>, on notera <m>u\cdot h</m> le vecteur <m>u(h)</m>.</li>
-            </ul>
-        </p>
-      </introduction>
+  
   <!-- include sections -->
   <xi:include href="sec-firstorder.ptx" />
   <xi:include href="sec-scalar.ptx" />

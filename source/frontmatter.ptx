@@ -7,22 +7,22 @@
   <bibinfo>
   
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>Sadik Boujaida</personname>
+      <department>Classe MP*</department>
+      <institution>CPGE Moulay Youssef</institution>
     </author>
     <date>
-      <today />
+      Février 2025
     </date>
 
     <website>
-      <url href="https://pretextbook.org">My Website</url>
+      <url href="https://texbouja.github.io">cpgem.ma</url>
     </website>
 
     <copyright>
-      <year>2020<ndash />2024</year>
-      <holder>You</holder>
-      <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+      <year>2025</year>
+      <holder>Sadik Boujaida</holder>
+      <shortlicense> Ce travail est sous license Creative Commons Attribution-ShareAlike 4.0 International License. Pour consulter cette license aller sur <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
   

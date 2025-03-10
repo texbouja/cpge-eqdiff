@@ -1,5 +1,5 @@
-/home/GitHub/cpge-eqdiff/source/main.ptx:35:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element biography, got colophon
-/home/GitHub/cpge-eqdiff/source/main.ptx:4:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
-/home/GitHub/cpge-eqdiff/source/main.ptx:6:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element introduction there
-/home/GitHub/cpge-eqdiff/source/main.ptx:6:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got introduction
-/home/GitHub/cpge-eqdiff/source/main.ptx:25:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element nbsp, got nothing
+/home/GitHub/cpge-eqdiff/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_NOTELEM: Expecting an element got text
+/home/GitHub/cpge-eqdiff/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
+/home/GitHub/cpge-eqdiff/source/main.ptx:6:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
+/home/GitHub/cpge-eqdiff/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext
+/home/GitHub/cpge-eqdiff/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element pretext there

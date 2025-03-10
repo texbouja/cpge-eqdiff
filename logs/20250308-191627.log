@@ -120,3 +120,72 @@ INFO    : Added server entry 7586deee7e 609299 8130 localhost
 INFO    : Starting the server
 INFO    : Server will soon be available at http://localhost:8130
 INFO    : Opening browser for target `web` at http://localhost:8130/output/web
+WARNING : Port 8130 could not be used.
+WARNING : Trying port 8131 instead.
+
+INFO    : adding server entry
+INFO    : Added server entry 7586deee7e 609299 8131 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8131
+INFO    : Opening browser for target `web` at http://localhost:8131/output/web
+WARNING : Port 8131 could not be used.
+WARNING : Trying port 8132 instead.
+
+INFO    : adding server entry
+INFO    : Added server entry 7586deee7e 609299 8132 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8132
+INFO    : Opening browser for target `web` at http://localhost:8132/output/web
+WARNING : Port 8132 could not be used.
+WARNING : Trying port 8133 instead.
+
+INFO    : adding server entry
+INFO    : Added server entry 7586deee7e 609299 8133 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8133
+INFO    : Opening browser for target `web` at http://localhost:8133/output/web
+WARNING : Port 8133 could not be used.
+WARNING : Trying port 8134 instead.
+
+INFO    : adding server entry
+INFO    : Added server entry 7586deee7e 609299 8134 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8134
+INFO    : Opening browser for target `web` at http://localhost:8134/output/web
+WARNING : Port 8134 could not be used.
+WARNING : Trying port 8135 instead.
+
+INFO    : adding server entry
+INFO    : Added server entry 7586deee7e 609299 8135 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8135
+INFO    : Opening browser for target `web` at http://localhost:8135/output/web
+WARNING : Port 8135 could not be used.
+WARNING : Trying port 8136 instead.
+
+INFO    : adding server entry
+INFO    : Added server entry 7586deee7e 609299 8136 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8136
+INFO    : Opening browser for target `web` at http://localhost:8136/output/web
+WARNING : Port 8136 could not be used.
+WARNING : Trying port 8137 instead.
+
+INFO    : adding server entry
+INFO    : There are 10 or more servers on file. Cleaning up ...
+ERROR   : View encountered an error.  Please report this: process 14021 with laddr 
+ERROR   : View encountered an error.  Please report this: process 14021 with laddr 
+INFO    : Found server at localhost:8128
+ERROR   : View encountered an error.  Please report this: process 15210 with laddr 
+INFO    : Found server at localhost:8129
+ERROR   : View encountered an error.  Please report this: process 609299 with laddr 
+ERROR   : View encountered an error.  Please report this: process 609299 with laddr 
+ERROR   : View encountered an error.  Please report this: process 609299 with laddr 
+INFO    : Found process 609299 no longer listening on specified port 8130
+INFO    : Terminating 609299

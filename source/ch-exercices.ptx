@@ -55,8 +55,8 @@
 
 <exercise>
     <!-- <title>Exercice 7.2</title> -->
+        <title>zéros d’une solution d’une équation différentielle linéaire homogène du second ordre.</title>
     <introduction>
-        <p>Une propriété classique des zéros d’une solution d’une équation différentielle linéaire homogène du second ordre.</p>
         <p>Soient <m>I</m> intervalle de <m>\mathbb{R}</m> et <m>p, q \in \mathcal{C}^0 (I, \mathbb{R})</m>. On considère l’équation</p>
         <p><me>(\mathcal{L}) : y'' + py' + qy = 0</me></p>
         <p>Soit <m>f</m> une solution sur <m>I</m> réelle et non identiquement nulle de <m>(\mathcal{L})</m>.</p>
@@ -141,13 +141,12 @@
 
 <exercise>
     <!-- <title>Exercice 7.4</title> -->
-    <introduction>
+    <statement>
         <p>Soient <m>q \in \mathcal{C}^1(\mathbb{R}, \mathbb{R})</m> et <m>a\gt  0</m> tels que</p>
         <p><me>\forall x \geq a, \quad q(x)\gt  0 \quad \text{et} \quad q'(x) \geq 0.</me></p>
         <p>Démontrer que toute solution de l’équation <m>y'' + qy = 0</m> est bornée au voisinage de <m>+\infty</m>.</p>
         <p>Indication : considérer la fonction <m>z = y^2 + \frac{y'^2}{q}</m>.</p>
-    </introduction>
-    <statement>
+    
         <p>Démontrer que toute solution de l’équation <m>y'' + qy = 0</m> est bornée au voisinage de <m>+\infty</m>.</p>
     </statement>
 <solution>
@@ -160,13 +159,12 @@
 
 <exercise>
     <!-- <title>Exercice 7.5</title> -->
-    <introduction>
+    <statement>
         <p>Soit <m>p : \mathbb{R} \rightarrow \mathbb{R}</m> une fonction continue et <m>y : \mathbb{R} \rightarrow \mathbb{R}</m> une fonction de classe <m>\mathcal{C}^2</m> telle que</p>
         <me>\forall x \in \mathbb{R}, \, y''(x) + p(x)y'(x) - y(x) = 0 \quad (1)</me>
         <p>On suppose qu’il existe deux réels <m>a, b</m> tels que <m>a \lt b, \, y(a) = y(b) = 0</m>. Démontrer que <m>y = 0</m>.</p>
         <p>Indication : si <m>y</m> n’est pas la fonction nulle, on utilisera l’exercice 7.2 p. 458 pour se ramener au cas où <m>y</m> ne s’annule pas sur <m>[a, b]</m>.</p>
-    </introduction>
-    <statement>
+    
         <p>Démontrer que <m>y = 0</m>.</p>
     </statement>
 <solution>
@@ -293,16 +291,15 @@
 
 <exercise>
     <!-- <title>Exercice 7.8</title> -->
-    <introduction>
-        <p>Une démonstration du théorème de relèvement pour les fonctions de classe <m>\mathcal{C}^1</m>.</p>
+        <title>Théorème de relèvement pour les fonctions de classe <m>\mathcal{C}^1</m>.</title>
+    <statement>
         <p>Soient <m>I</m> un intervalle de <m>\mathbb{R}</m>, <m>t_0 \in I</m>, <m>u, v \in \mathcal{C}^1(I, \mathbb{R})</m>, telles que <m>u^2 + v^2 = 1</m>. On considère également un réel <m>\theta_0</m> tel que</p>
         <me>u(t_0) + iv(t_0) = \exp(i\theta_0),</me>
         <p>ainsi que la fonction</p>
         <me>\theta : I \rightarrow \mathbb{R}, \quad t \mapsto \theta_0 + \int_0^t [u(s)v'(s) - u'(s)v(s)]ds.</me>
         <p>Démontrer que pour tout réel <m>t</m>,</p>
         <me>u(t) + iv(t) = \exp(i\theta(t)).</me>
-    </introduction>
-<statement>
+    
         <p>Démontrer que pour tout réel <m>t</m>,</p>
         <me>u(t) + iv(t) = \exp(i\theta(t)).</me>
     </statement>
@@ -323,10 +320,10 @@
     </solution>
 </exercise>
 
-<exercise>
+<exercise xml:id="exe-7-9">
     <!-- <title>Exercice 7.9</title> -->
+        <title>Théorème de Sturm</title>
     <introduction>
-        <p>Théorème de Sturm.</p>
         <p>Soient <m>I</m> un intervalle non trivial de <m>\mathbb{R}</m>, <m>p_1, p_2 : I \rightarrow \mathbb{R}</m> deux fonctions continues telles que <m>p_1 \leq p_2</m>. On considère également deux fonctions <m>y_1, y_2 : I \rightarrow \mathbb{R}</m> non identiquement nulles, de classe <m>\mathcal{C}^2</m> telles que</p>
         <me>\forall x \in I, \quad y_1''(x) + p_1(x)y_1(x) = 0 \quad \text{et} \quad y_2''(x) + p_2(x)y_2(x) = 0.</me>
         <p>Enfin, <m>a</m> et <m>b</m> désignent deux zéros consécutifs de <m>y_1</m>.</p>
@@ -364,11 +361,10 @@
 
 <exercise>
     <!-- <title>Exercice 7.10</title> -->
-    <introduction>
-        <p>Une application de l’exercice 7.9.</p>
+    <statement>
+        <p>Une application de <xref ref="exe-7-9"/></p>
         <p>Soit <m>y : \mathbb{R} \rightarrow \mathbb{R}</m> une fonction de classe <m>\mathcal{C}^2</m>, non identiquement nulle et solution sur <m>\mathbb{R}</m> de l’équation différentielle <m>y''(x) + \exp(x) \cdot y(x) = 0</m>.</p>
-    </introduction>
-<statement>
+    
         <p>Démontrer que l’ensemble des zéros de <m>y</m> est infini dénombrable.</p>
     </statement>
 <solution>
@@ -393,11 +389,10 @@
 
 <exercise>
     <!-- <title>Exercice 7.11</title> -->
-    <introduction>
-        <p>Une application de l’exercice 7.9.</p>
+    <statement>
+        <p>Une application de <xref ref="exe-7-9"/></p>
         <p>Soit <m>q : \mathbb{R} \rightarrow \mathbb{R}</m> une fonction continue, <m>T</m>-périodique (<m>T \gt 0</m>).</p>
-    </introduction>
-<statement>
+    
         <p>On considère une fonction <m>y : \mathbb{R} \rightarrow \mathbb{R}</m> de classe <m>\mathcal{C}^2</m>, non identiquement nulle et solution sur <m>\mathbb{R}</m> de l’équation différentielle <m>y'' + qy = 0</m>.</p>
         <p>On note <m>\mathcal{Z}(y)</m> l’ensemble des zéros de <m>y</m>.</p>
         <p>Démontrer que ou bien <m>\text{Card}(\mathcal{Z}(y)) \leq 1</m> ou bien <m>\mathcal{Z}(y)</m> est infini.</p>
@@ -417,15 +412,14 @@
 </exercise>
 
 <exercise>
+        <title>Le lemme de Gronwall.</title>
     <!-- <title>Exercice 7.12</title> -->
-    <introduction>
-        <p>Le lemme de Gronwall.</p>
+    <statement>
         <p>Soient <m>u, v \in \mathcal{C}^0([a, +\infty], \mathbb{R}_+)</m> et <m>c</m> un réel positif tels que</p>
         <me>\forall \, x \in [a, +\infty], \, u(x) \leq c + \int_a^x u(t)v(t)dt.</me>
         <p>Démontrer que pour tout <m>x \in [a, +\infty]</m>,</p>
         <me>u(x) \leq c \cdot \exp \left( \int_a^x v(t)dt \right).</me>
-    </introduction>
-<statement>
+    
         <p>Démontrer que pour tout <m>x \in [a, +\infty]</m>,</p>
         <me>u(x) \leq c \cdot \exp \left( \int_a^x v(t)dt \right).</me>
     </statement>
@@ -446,14 +440,13 @@
 
 
 <exercise>
+        <title>Un problème de conditions aux limites.</title>
     <!-- <title>Exercice 7.13</title> -->
-    <introduction>
-        <p>Un problème de conditions aux limites.</p>
+    <statement>
         <p>Soient <m>f, g \in \mathcal{C}^0([a, b], \mathbb{R})</m>. On suppose que <m>f \leq 0</m>. On s’intéresse à l’équation différentielle</p>
         <me>(\mathcal{L}) : y'' + f(x)y = g(x)</me>
         <p>où la fonction inconnue <m>y</m> est supposée à valeurs réelles.</p>
-    </introduction>
-<statement>
+
         <p>Soit <m>y</m> une solution de l’équation homogène <m>(\mathcal{H})</m> associée vérifiant <m>y(a) = y(b) = 0</m>. En considérant <m>\int_a^b f(x)y^2(x)dx</m>, démontrer que <m>y</m> est constante, égale à zéro sur <m>[a, b]</m>.</p>
     </statement>
 <solution>
@@ -466,12 +459,11 @@
 
 <exercise>
     <!-- <title>Exercice 7.14</title> -->
-    <introduction>
+    <statement>
         <p>Soit <m>q : \mathbb{R}_+ \rightarrow \mathbb{R}_+</m> une fonction de classe <m>\mathcal{C}^1</m> telle que <m>q' \in L^1(\mathbb{R}_+)</m>. Démontrer que les solutions sur <m>\mathbb{R}_+</m> de l’équation</p>
         <me>(\mathcal{H}) : y'' + (1 + q)y = 0</me>
         <p>sont toutes bornées ainsi que leurs dérivées d’ordre 1. Indication : on pourra considérer la fonction <m>E = \frac{1}{2}(y^2 + y'^2)</m> puis utiliser le lemme de Gronwall (exercice 7.12).</p>
-    </introduction>
-<statement>
+    
         <p>Démontrer que les solutions sur <m>\mathbb{R}_+</m> de l’équation <m>(\mathcal{H})</m> sont toutes bornées ainsi que leurs dérivées d’ordre 1.</p>
     </statement>
 <solution>
@@ -520,13 +512,12 @@
 
 <exercise>
     <!-- <title>Exercice 7.16</title> -->
-    <introduction>
+    <statement>
         <p>Soient <m>A \in M_n (\mathbb{C})</m> et</p>
         <me>(\mathcal{E}_A) : Y' = AY</me>
         <p>(où la fonction inconnue <m>Y</m> est à valeurs dans <m>\mathbb{C}^n</m>).</p>
         <p>Démontrer que toutes les solutions sur <m>\mathbb{R}</m> de <m>(\mathcal{E}_A)</m> sont bornées si et seulement si <m>A</m> est diagonalisable et si <m>\text{Sp}(A) \subset i\mathbb{R}</m>.</p>
-    </introduction>
-<statement>
+   
         <p>Démontrer que toutes les solutions sur <m>\mathbb{R}</m> de <m>(\mathcal{E}_A)</m> sont bornées si et seulement si <m>A</m> est diagonalisable et si <m>\text{Sp}(A) \subset i\mathbb{R}</m>.</p>
     </statement>
 <solution>
@@ -550,13 +541,12 @@
 
 <exercise>
     <!-- <title>Exercice 7.17</title> -->
-    <introduction>
+    <statement>
         <p>Soient <m>A \in \mathcal{M}_n (\mathbb{C})</m> et</p>
         <me>(\mathcal{E}_A) : Y' = AY</me>
         <p>(où la fonction inconnue <m>Y</m> est à valeurs dans <m>\mathbb{C}^n</m>).</p>
         <p>Que peut-on dire de <m>A</m> si toutes les solutions sur <m>\mathbb{R}</m> de <m>(\mathcal{E}_A)</m> sont 1-périodiques ?</p>
-    </introduction>
-<statement>
+    
         <p>Que peut-on dire de <m>A</m> si toutes les solutions sur <m>\mathbb{R}</m> de <m>(\mathcal{E}_A)</m> sont 1-périodiques ?</p>
     </statement>
 <solution>
@@ -629,16 +619,14 @@
 
 <exercise>
     <!-- <title>Exercice 7.19</title> -->
-    <introduction>
-        <p>Méthode d’Euler – Python.</p>
+        <title>Méthode d’Euler – Python.</title>
+    <statement>
         <p>Cet exercice utilise le lemme de Gronwall, exercice 7.12.</p>
         <p>Soit <m>q : \mathbb{R}_+ \rightarrow \mathbb{R}</m> une application continue et intégrable sur <m>\mathbb{R}_+</m>.</p>
         <p>On lui associe l’équation différentielle</p>
         <me>(\mathcal{H}) : y'' + (1 + q)y = 0.</me>
         <p>Soit <m>y \in S_{\mathbb{R}_+} (\mathcal{H})</m>.</p>
-    </introduction>
-    <task>
-<statement>
+    
         <p>Dans cette question uniquement, <m>q(t) = \frac{1}{1 + t^2 + t^4}</m>.</p>
         <p>Soit <m>y: \mathbb{R}_+ \rightarrow \mathbb{R}</m> une solution de l’équation <m>(\mathcal{H})</m> telle que <m>y(0) = \alpha, \, y'(0) = \beta</m>. À l’aide de la méthode d’Euler (ou bien l’instruction <m>odeint</m> du module <m>scipy.integrate</m>), tracer le support de la courbe paramétrée</p>
         <me>[0, 20] \rightarrow \mathbb{R}^2, \, t \mapsto (y(t), y'(t))</me>
@@ -686,7 +674,6 @@ portrait(-1, 1, 10, nbpoints=1001)
 </input></sage>
         <p>On peut penser que la solution <m>y</m> est bornée (surtout en utilisant <m>odeint</m>).</p>
     </solution>
-</task>
 </exercise>
 
 

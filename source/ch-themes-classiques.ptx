@@ -37,23 +37,26 @@
             <p>l'inconnue <m>u</m> étant une fonction dérivable de <m>I</m> dans <m>\mathcal L(E)</m>.</p>
             
             </insight>
-            <ol>
-                <li><title>Espace des solutions de <m>(RH)</m></title>
+            <paragraphs>
+            <title>Espace des solutions de <m>(RH)</m></title>
                 
                 <p><m>(RH)</m> s'écrit sous la forme <m>u'=\phi(t)\cdot u</m>, où <m>\phi</m> est l'application continue de <m>I</m> dans <m>\mathcal L(E)</m> définie par <m>\phi(t)\cdot v=a(t)\circ v</m> pour tout <m>t\in I</m> et <m>v\in\mathcal L(E)</m>.<me>\dim S_I(RH)=\dim \mathcal L(E)=(\dim E)^2</me>.
                 </p>
-            </li>
-            <li><title>Transfert de solutions</title>
+            </paragraphs>
+            <paragraphs>
+                <title>Transfert de solutions</title>
             <p>Si <m>u</m> est une solution de <m>(RH)</m> sur <m>I</m> alors</p>
             <ol>
                 <li><p>pour tout <m>e\in E</m>, <m>f:t\longmapsto u(t)\cdot e</m> est une solution de <m>(H)</m> sur <m>I</m>.</p></li>
                 <li><p>pour tout <m>v\in \mathcal L(E)</m>, <m>t\longmapsto u(t)\circ v</m> est une solution de <m>(RH)</m> sur <m>I</m>.</p></li>
             </ol>
-            </li>
-            <li><title>Conservation du rang</title> 
+            </paragraphs>
+            <paragraphs>
+                <title>Conservation du rang</title> 
             <p>Si <m>u</m> est une solution de <m>(RH)</m> sur <m>I</m> alors le rang de <m>u(t)</m> est le même pour tout <m>t\in I</m>. En particulier s'il existe <m>t_0\in I</m> tel que <m>u(t_0)</m> est inversible alors <m>u(t)</m> est inversible pour tout <m>t\in I</m>. On dit alors que <m>u</m> est une solution fondamentale de l'équation résolvante <m>(RH)</m>.</p>
-            </li>
-            <li><title>Solutions de <m>(RH)</m> et <m>(H)</m> en fonction d'une solution fondamentale</title>
+            </paragraphs>
+            <paragraphs>
+                <title>Solutions de <m>(RH)</m> et <m>(H)</m> en fonction d'une solution fondamentale</title>
             <p>Si <m>r</m> une solution fondamentale de <m>(RH)</m>, alors</p>
             <ol>
                 <li><p>les solutions de <m>(RH)</m> sont les fonctions <m>u:t\longmapsto r(t)\circ v</m> où <m>v\in\mathcal L(E)</m>.</p></li>
@@ -62,22 +65,22 @@
             <p>Les solutions de <m>(H)</m> et celles de <m>(RH)</m> peuvent donc toutes s'exprimer à l'aide d'une seule solution de <m>(RH)</m>. Mais ce constat est à peu près inutile quand il s'agit de résoudre effectivement <m>(H)</m>. Il est beaucoup moins évident de déterminer une solution de <m>(RH)</m> que de déterminer directement des solutions de <m>(H)</m>.</p>
             <p>Si <m>\mathcal B=(e_1,\ldots,e_d)</m> est une base de <m>E</m> alors les fonctions <m>f_k:t\longmapsto r(t)\cdot e_k</m> forment un système fondamental de solutions de <m>(H)</m>. Leurs wronksien dans la base <m>\mathcal B</m> est la fonction <m>W:t \longmapsto \det\big(r(t)\big)</m>.</p>
             <p>d'où le titre de solution fondamentale attribué à ce genre d'application.</p>
-            </li>
-            <li><title>Expression des solutions avec conditions initiales</title>
+            </paragraphs>
+            <paragraphs>
+                <title>Expression des solutions avec conditions initiales</title>
             <p>Si <m>t_0\in I</m> et <m>r</m> est l'unique solution de <m>(RH)</m> telle que <m>r(t_0)=\id_E</m> alors</p>
             <ol>
                 <li><p>pour toute solution <m>f</m> de <m>(H)</m> : <m>f(t)=r(t)\cdot f(t_0),\; \forall t\in I</m>.</p></li>
                 <li><p>pour toute solution <m>u</m> de <m>(RH)</m> : <m>u(t)=r(t)\circ u(t_0),\;\forall t\in I</m>.</p></li>
             </ol>
-            </li>
-        </ol>
+        </paragraphs>
         </subsection>
 
 
         <subsection>
             <title>Application résolvante de <m>(H)</m></title>
-            <ol>
-                <li><title>Définition de l'application résolvante</title>
+                <paragraphs>
+                    <title>Définition de l'application résolvante</title>
             <p>On appelle application résolvante de l'équation homogène <m>(H)</m>, l'application <m>R:I\times I\longmapsto \mathcal L(E)</m> définie par</p>
             <men>\forall (t,s)\in I^2,\; R(t,s)=r_s(t)</men>
             <p>où <m>r_s</m> est l'unique solution de <m>(RH)</m> vérifiant <m>r_s(s)=\id_E</m>. Précisons :</p>
@@ -86,17 +89,19 @@
                 <li><p>si on fixe <m>s\in I</m>, l'application <m>t\longmapsto R(t,s)</m> donne l'évolution au cours du temps de la solution de <m>(RH)</m> qui est passé, ou passera, par <m>\id_E</m> à l'instant <m>s</m>.</p></li>
                 <li><p>si on fixe <m>t\in I</m>, l'application <m>s\longmapsto R(t,s)</m> est le flot à l'instant <m>t</m> de toutes les solutions qui sont passées, ou passeront par <m>\id_E</m> à l'instant <m>s</m>.</p></li>
             </ol>
-            </li>
+            </paragraphs>
 
-            <li><title>Une application pour les exprimer toutes</title>
+            <paragraphs>
+                <title>Une application pour les exprimer toutes</title>
             <p>Soit <m>t_0\in I</m></p>
             <ol>
                 <li><p>Pour tout <m>u_0\in \mathcal L(E)</m>, l'unique solution <m>u</m> de <m>(RH)</m> telle que <m>u(t_0)=u_0</m> est donnée par <m>u(t)=R(t,t_0)\circ u_0</m>, soit <m>u(t)=R(t,t_0)\circ u(t_0)</m>.</p></li>
                 <li><p>pour tout <m>x_0\in E</m>, l'unique solution <m>f</m> de <m>(H)</m> telle que <m>f(t_0)=x_0</m> est donnée par <m>f(t)=R(t,t_0)\cdot x_0</m>, soit <m>f(t)=R(t,t_0)\cdot f(t_0)</m>.</p></li>
             </ol>
-            </li>
+            </paragraphs>
 
-            <li><title>Les propriétés de la résolvante</title>
+            <paragraphs>
+                <title>Les propriétés de la résolvante</title>
             <ol>
                 <li><p>pour tout <m>(t,s)\in I^2</m>, <m>R(t,s)</m> est un endomorphisme inversible de <m>E</m>.</p></li>
                 <li><p>pour tout <m>(t,s,\ell)\in I^3</m>, <m>R(t,s)\circ R(s,\ell)=R(t,\ell)</m>. En particulier <m>R(t,s)^{-1}=R(s,t)</m>.</p></li>
@@ -107,33 +112,52 @@
                     </md>
                 </li>
             </ol>
-            </li>
+            </paragraphs>
 
-            <li><title>Expression de la résolvante en fonction des solutions fondamentales</title>
+            <paragraphs>
+                <title>Expression de la résolvante en fonction des solutions fondamentales</title>
             <p>Pour toute solution fondamentale <m>r</m> de l'équation <m>(RH)</m> on a</p>
             <men>\forall (t,s)\in I^2,\; R(t,s)=r(t)\circ r(s)^{-1}</men>
-            </li>
-            </ol>
+            </paragraphs>
         </subsection>
 
         <subsection>
             <title>Résolvante et équation complète</title>
             
-            <ol>
-            <li><title>Variation des constantes</title>
+            <paragraphs> 
+            <title>Variation des constantes</title>
             <p>Sachant que les solutions de <m>(H)</m> sont les fonctions <m>t\longmapsto r(t)\cdot e</m> où <m>e</m> est un vecteur quelconque de <m>E</m>, la méthode de la variation des constantes revient donc à faire varier le vecteur <m>e</m>. On pose donc <m>x(t)=r(t)\cdot e(t)</m>. Alors
             <men>(E)\Longleftrightarrow r(t)\cdot e'(t)=b(t)\Longleftrightarrow e'(t)=r(t)^{-1}\cdot b(t)</men>
             Ce qui permet en théorie de calculer <m>e'</m> et donc <m>e</m>.</p>
-            </li>
+            </paragraphs>
 
-            <li><title>Formule de Duhammel</title>
+            <paragraphs>
+            <title>Formule de Duhammel</title>
             <p>Soit <m>(t_0,x_0)\in I\times E</m>. L'unique solution <m>f</m> de <m>(E)</m> vérifiant la condition initiale <m>f(t_0)=x_0</m> est donnée par la formule dite de Duhammel :</p>
             <men xml:id="formule-duhammel">
             \forall t\in\R,\; f(t)=R(t,t_0)\cdot x_0+\int_{t_0}^tR(t,s)\cdot b(s)\mathrm{d} s
             </men>
             <p>Dans cette expression de <m>f(t)</m>, l'intégrale représente une solution particulière de l'équation <m>(E)</m>, la solution qui à l'instant <m>t_0</m> passe par le vecteur nul. L'autre partie est la solution de l'équation homogène <m>(H)</m> qui à l'instant <m>t_0</m> passe par le point <m>x_0</m>.</p>
-            </li>
-            </ol>
+            <p>
+                On notera également que cette expression généralise celle de la solution du problème de Cauchy d'une EDL à coefficients constant vue dans <xref ref="expression-solution-cauchy"/>
+            </p>
+            </paragraphs>
+
+        <paragraphs>
+            <title>Cas où <m>a(t)\circ a(s)=a(s)\circ a(t)</m> </title>
+            <p>On suppose que pour tous <m>t,s\in I</m> 
+            <me>
+                a(t)\circ a(s)=a(s)\circ a(t)
+            </me>
+            Alors selon <xref ref="expression-solutions-commutatives"/> la résolvante de <m>(H)</m> est donnée par 
+            <me>
+               \forall (t,s)\in I^2,\;
+               R(t,s)=\exp\biggl(\int_{s}^ta(u)\mathrm d u\biggr) 
+            </me>
+            </p>
+            
+            
+        </paragraphs>
         </subsection>
 
         <subsection>
@@ -155,7 +179,7 @@
     <subsection>
         <title>Solutions périodiques d'une EDL périodique</title>
         <p>
-            Voir <xref ref="solutions-periodiques"/> et <xref ref="sysdiff-solutions-periodiques"/>
+            Voir <xref ref="sysdiff-solutions-periodiques"/>
         </p>
         
     </subsection>
@@ -318,18 +342,18 @@
         <p>Les solutions de <m>(H^*)</m> sont de la forme <m>g = \sigma f</m> où <m>f</m> est une solution quelconque de <m>(H)</m> et <m>\sigma</m> est l'une des solutions non nulles de l'<term>EDLS</term> homogène d'ordre <m>1</m> :</p>
         <men>(a(t)\sigma)' = b(t)\sigma</men>
         <p>Ce qui implique que si on peut résoudre <m>(H^*)</m>, alors on peut le faire pour <m>(H)</m> et vice versa.</p>
-        <proof>
+        <explanation>
             <p>Fixons une fonction non nulle <m>\sigma</m> telle que <m>(a\sigma)' = b\sigma</m> et considérons une fonction <m>x</m> de classe <m>\mathcal C^2</m> sur <m>I</m>. Posons <m>y = \sigma x</m>. Alors</p>
             <men>
                 \begin{aligned}
-                (H^*) \amp\Longleftrightarrow amp(ay)'' - (by)' + cy = 0 \\
+                (H^*) \amp \Longleftrightarrow (ay)'' - (by)' + cy = 0 \\
                 \amp\Longleftrightarrow (a\sigma x)'' - (b\sigma x)' + c\sigma x = 0 \\
                 \amp\Longleftrightarrow (a\sigma)x'' + 2(a\sigma)'x' + (a\sigma)''x - (b\sigma)x' - (b\sigma)'x + c\sigma x = 0 \\
                 \amp\Longleftrightarrow a\sigma x'' + b\sigma x' + c\sigma x = 0 \quad (\text{car } (a\sigma)' = b\sigma) \\
                 \amp\Longleftrightarrow ax'' + bx' + cx = 0
                 \end{aligned}
             </men>
-        </proof>
+        </explanation>
         <p>En multipliant <m>(H)</m> par <m>\sigma(t)</m>, elle équivaut à l'équation auto-adjointe</p>
         <men>(a(t)\sigma(t)x')' + c(t)\sigma(t)x = 0 \quad (HA)</men>
     </li>
@@ -425,7 +449,7 @@
     
 
 
-    <subsection>
+    <subsection xml:id="sec-zeros-des-solutions">
         <title>Zéros des solutions d'une EDLS homogène du second ordre</title>
 
         <introduction>
@@ -666,7 +690,7 @@
             </men>
             <p>On a alors</p>
             <men>
-                g'(t) = -\frac{1}{f(t)} \frac{\d}{\mathrm{d} t} (\sigma'(t)f(t)) + \sigma(t) \frac{f'(t)^2}{f(t)^2} = q(t) + \frac{g(t)^2}{\sigma(t)}
+                g'(t) = -\frac{1}{f(t)} \frac{\mathrm d}{\mathrm{d} t} (\sigma'(t)f(t)) + \sigma(t) \frac{f'(t)^2}{f(t)^2} = q(t) + \frac{g(t)^2}{\sigma(t)}
             </men>
             <p>Par suite</p>
             <men>

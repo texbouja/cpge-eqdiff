@@ -6,6 +6,7 @@
   <book xml:id="eqdiff" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Equations différentielles linéaires</title>
     <subtitle>Classes MP/MP*</subtitle>
+    <creator>Sadik Boujaida</creator>
 
     <!-- Include frontmatter --> 
     <xi:include href="./frontmatter.ptx" />

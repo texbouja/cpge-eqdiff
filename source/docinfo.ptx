@@ -57,6 +57,7 @@
   <math-package latex-name="mathrsfs" mathjax-name=""/> 
   <math-package latex-name="mathtools" mathjax-name="mathtools"/> 
   <math-package latex-name="empheq" mathjax-name="empheq"/> 
+  <rename element="colophon" xml:lang="fr-FR">License</rename> 
   <rename element="task" xml:lang="fr-FR">Question</rename> 
   <rename element="inlineexercise" xml:lang="fr-FR">Exercice</rename> 
   <rename element="insight" xml:lang="fr-FR">Vocabulaire</rename> 

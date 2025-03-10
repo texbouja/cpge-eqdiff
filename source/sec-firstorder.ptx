@@ -2,6 +2,18 @@
 
 <section xml:id="sec-equations-differentielles-lineaires">
     <title>Équations différentielles linéaires d'ordre <m>1</m></title>
+
+    <convention>
+        <p>
+            <ul>
+                <li><m>E</m> désignera un <m>\K</m>-evn de dimension finie non nulle <m>d</m>.</li>
+                <li>On fixe une base <m>\mathcal B=(e_1,e_2,\ldots,e_d)</m> de <m>E</m>.</li>
+                <li><m>I</m> sera un intervalle non trivial de <m>\R</m>.</li>
+                <li>On notera <m>\mathcal C^k(I,E)</m> l'ensemble des fonctions de classe <m>\mathcal C^k</m> de <m>I</m> dans <m>E</m>.</li>
+                <li>Pour tout <m>u\in\mathcal L(E)</m> et <m>h\in E</m>, on notera <m>u\cdot h</m> le vecteur <m>u(h)</m>.</li>
+            </ul>
+        </p>
+      </convention>
     
 
     <assemblage>
@@ -33,7 +45,7 @@
     </assemblage>
 
         <subsection>
-            <title>Solution d'une équation différentielle linéaire du premier ordre</title>
+            <title>Solutions d'une équation différentielle linéaire du premier ordre</title>
 
             <convention>
                 <p>
@@ -445,23 +457,23 @@
                 Il existe donc <m>a,b,c\in\C</m> tels que 
                 <me>
                 \begin{cases}
-                    u=ate^{t^2/2} \\
-                    v=be^{it^2/2} \\
-                    w=ce^{-it^2/2}
+                    u=at\e^{t^2/2} \\
+                    v=b\e^{it^2/2} \\
+                    w=c\e^{-it^2/2}
                 \end{cases}
                 </me>
                 de quoi on déduit que les solutions complexes de <m>(SH)</m> sont données par 
                 <me>
                 \begin{cases}
-                    x=ate^{t^2/2}-2be^{it^2/2}-2ce^{-it^2/2} \\
-                    y=b(1+i)e^{it^2/2}+c(1-i)e^{-it^2/2} \\
-                    z=2be^{it^2/2}+2ce^{-it^2/2}
+                    x=at\e^{t^2/2}-2b\e^{it^2/2}-2c\e^{-it^2/2} \\
+                    y=b(1+i)\e^{it^2/2}+c(1-i)\e^{-it^2/2} \\
+                    z=2b\e^{it^2/2}+2c\e^{-it^2/2}
                 \end{cases}
                 </me>
                 cette solution est réelle si <m>a\in\R</m> et <m>c=\overline b</m> donc en posant <m>b=\alpha+i\beta</m> on peut écrire 
                 <me>
                 \begin{cases}
-                    x=ate^{t^2/2}-4\alpha\cos(t^2/2)+4\beta\sin(t^2/2) \\
+                    x=at\e^{t^2/2}-4\alpha\cos(t^2/2)+4\beta\sin(t^2/2) \\
                     y=(\alpha-\beta)\cos(t^2/2)+(\alpha+\beta)\sin(t^2/2) \\
                     z=4\alpha\cos(t^2/2)-4\beta\sin(t^2/2)
                 \end{cases}
@@ -715,12 +727,12 @@
                     </me>
                      la résolution du système différentiel <m>X'=AX</m> passe donc par celle du système «plus simple» <m>Y'=RY</m>.</p> 
         
-                    <p> Noter aussi que puisque <m>e^{tA}=Pe^{tR}P^{-1}</m> on peut directement fournir les solutions de <m>(SH)</m> en calculant <m>e^{tR}</m>. Ces solutions sont de la forme : </p> 
+                    <p> Noter aussi que puisque <m>\e^{tA}=P\e^{tR}P^{-1}</m> on peut directement fournir les solutions de <m>(SH)</m> en calculant <m>\e^{tR}</m>. Ces solutions sont de la forme : </p> 
                         <aside><p>Quelque soit la méthode de calcul choisie, le calcul explicite de <m>P^{-1}</m> n'est pas nécessaire. 
                         </p></aside> 
                     <p>
                     <me>
-                        t\longmapsto Pe^{tR}W
+                        t\longmapsto P\e^{tR}W
                     </me>
                      où <m>W</m> est un vecteur quelconque de <m>\mathcal M_{n,1}(\K)</m>.</p>
                 </li>
@@ -731,19 +743,18 @@
     <remark><title> SFS et variation des constantes</title>
         <ol>
             <li><title>Système fondamental de solution et wronksien</title>
-        <p>Soient <m>v_1,v_2,\ldots,v_d\in E</m> et posons pour tout <m>k\in\iic{1,d}</m>, <m>f_k(t)=\e^{ta}\cdot v_k</m>.
+        <p>Soient <m>v_1,v_2,\ldots,v_d\in E</m> et posons pour tout <m>k\in\iic{1,d}</m>, <m>f_k(t)=\e^{ta}\cdot v_k</m>.</p>
         <aside>
             <p>Ces notions ont toutefois peu d'intérêt dans le cas d'une <acro>EDL</acro> à coefficients constants car on sait expliciter les solutions.</p>
         </aside>
-            <ul>
+            <p><ul>
                 <li><m>(f_1,f_2,\ldots,f_d)</m> est un <acro>SFS</acro> de <m>(H)</m> sur <m>\R</m> si et seulement si <m>(v_1,v_2,\ldots,v_d)</m> est une base de <m>E</m>.</li>
                 <li>Le wronksien de <m>(f_1,f_2,\ldots,f_d)</m> dans la base <m>\mathcal B</m> est donné par
                     <me>
                         \forall t\in\R,\; W(t)=\det\big(\e^{ta}\big)\det_{\mathcal B}(v_1,v_2,\ldots,v_d)
                     </me>
                 </li>
-            </ul>
-        </p>
+            </ul></p>
         </li>
         <li> <title>Variation des constantes</title>
             <p>Les solutions de l'équation homogène étant les fonctions
@@ -754,20 +765,57 @@
             <me>
                 (E)\Longleftrightarrow v'(t)=\e^{-ta}\cdot b(t)
             </me>
-            Cette présentation n'offre toutefois pas d'avantage pratique par rapport à la méthode générale de la variation des constantes puisqu'elle exige le calcul de l'exponentielle <m>e^{-ta}</m> et donc le calcul de l'inverse de la matrice de passage dans une base de réduction.
-            </p>.
+            Cette présentation n'offre toutefois pas d'avantage pratique par rapport à la méthode générale de la variation des constantes puisqu'elle exige le calcul de l'exponentielle <m>\e^{-ta}</m> et donc le calcul de l'inverse de la matrice de passage dans une base de réduction.
+            </p>
         </li>
         </ol> 
     </remark>
 
     <theorem xml:id="expression-solution-cauchy">
         <title>Expression intégrale de la solution du problème de Cauchy</title>
-        <p>
+        <statement>
+            <p>
             Soient <m>t_0\in I</m> et <m>x_0\in E</m>. L'unique solution <m>f</m> de l'équation complète <m>(E)</m> vérifiant la condition initiale <m>f(t_0)=x_0</m> est donnée par
             <me>
                 \forall t\in I,\; f(t)=\e^{(t-t_0)a}\cdot x_0+\int_{t_0}^t\e^{(t-s)a}\cdot b(s)\dt s
             </me>
         </p>
+        </statement> 
+        <proof>
+            <p> Notons <m>f</m> l'unique solution de <m>(E)</m> telle que <m>f(t_0)=x_0</m> et posons
+            <me>
+                g(t)=\e^{-ta}\cdot f(t)
+            </me>
+            La fonction <m>g</m> est de classe <m>\mathcal C^1</m> et on a  
+            <md>
+                <mrow> g'(t)\amp =-a\circ \e^{-ta}\cdot f(t)+\e^{-ta}\cdot f'(t)
+                </mrow>
+                <mrow> \amp=
+                -a\circ \e^{-ta}\cdot f(t)+\e^{-ta}\cdot\bigl(a\cdot f(t)+b(t)\bigr)
+                 </mrow>
+                 <mrow> \amp=
+                 \e^{-ta}\cdot b(t)
+                  </mrow>
+            </md>
+            <m>g</m> est donc une primitive de la fonction <m>t\longmapsto \e^{-ta}\cdot b(t) </m>. Puisque <m>g(t_0)=\e^{-t_0a}\cdot f(t_0)=\e^{-t_0a}\cdot x_0</m> alors 
+            <me>
+                g(t)=\e^{-t_0a}\cdot x_0+\int_{t_0}^t \e^{-sa}\cdot b(s)\mathrm ds
+            </me>
+            et donc 
+            <md>
+                <mrow>f(t) \amp=
+                \e^{ta}\cdot\biggl(\e^{-t_0a}\cdot x_0+\int_{t_0}^t \e^{-sa}\cdot b(s)\mathrm ds\biggr)
+                 </mrow>
+                 <mrow> \amp= \e^{(t-t_0)a}\cdot x_0+\int_{t_0}^t\e^{(t-s)a}\cdot b(s)\dt s
+                 
+                 </mrow>
+            </md>
+            
+            
+            
+                
+            </p>
+        </proof>
     </theorem>
 </subsection>
 </section>

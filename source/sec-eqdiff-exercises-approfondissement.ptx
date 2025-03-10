@@ -81,11 +81,11 @@
     </exercise>
 
     <exercise xml:id="expression-solutions-commutatives">
-        <title>Expression des solutions quand <m>a(t) \circ a(s) = a(s) \circ a(t)</m></title>
-        <statement>
+        <title>Expression des solutions quand <m>a(t) \circ a(s) = a(s) \circ a(t)</m></title>            
             
-            <ol>
-                <li><p>On considère une <acro>EDL</acro> du premier ordre homogène
+            <task> 
+            <statement>
+            <p>On considère une <acro>EDL</acro> du premier ordre homogène
                     <me>
                         x' = a(t) \cdot x
                     </me>
@@ -94,17 +94,9 @@
                         t \longmapsto \exp\bigg(\int_{t_0}^t a(s) \, ds\bigg) \cdot v
                     </me>
                     où <m>v</m> est un vecteur quelconque de <m>E</m>. Quel est l'unique solution de <m>(H)</m> telle que <m>f(t_0) = x_0</m> lorsque <m>x_0 \in E</m> est donnée ?</p>
-                </li>
-                <li><p>Résoudre sur <m>\R</m> le système différentiel <m>X' = A(t)X</m> lorsque
-                    <me>
-                        A(t) = \begin{pmatrix} 0 \amp  1/2 \amp  0 \\ -1/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 + \sin t \end{pmatrix}
-                    </me></p>
-                </li>
-            </ol>
-        </statement>
-        <solution>
-                <ol>
-                    <li><p>Soit <m>v \in E</m> et considérons les fonctions
+                </statement> 
+                <solution>
+                        <p>Soit <m>v \in E</m> et considérons les fonctions
                         <me>
                             A : t \longmapsto \int_{t_0}^t a(s) \, ds \quad \text{et} \quad f : t \longmapsto \e^{A(t)} \cdot v
                         </me>
@@ -117,8 +109,18 @@
                             f'(t) = A'(t) \circ \e^{A(t)} \cdot v = a(t) \cdot f(t)
                         </me>
                         La fonction <m>f</m> est donc une solution de <m>(H)</m>. C'est l'unique solution de <m>(H)</m> qui vérifie <m>f(t_0) = v</m>. Le vecteur <m>v</m> étant quelconque dans <m>E</m>, cela prouve que toutes les solutions de <m>(H)</m> sont de la forme de <m>f</m>.</p>
-                    </li>
-                    <li><p>La condition <m>A(t)A(s) = A(s)A(t)</m> est bien vérifiée et on a
+                </solution>
+                </task>
+                <task> 
+                <statement>
+                    <p>
+                    Résoudre sur <m>\R</m> le système différentiel <m>X' = A(t)X</m> lorsque
+                    <me>
+                        A(t) = \begin{pmatrix} 0 \amp  1/2 \amp  0 \\ -1/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 + \sin t \end{pmatrix}
+                    </me></p>
+                </statement>
+                <solution>
+                    <p>La condition <m>A(t)A(s) = A(s)A(t)</m> est bien vérifiée et on a
                         <me>
                             \int_0^t A(s) \, ds = \begin{pmatrix}
                             0 \amp  t/2 \amp  0 \\ -t/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  t - \cos t + 1
@@ -137,31 +139,31 @@
                             \lambda_2 \begin{pmatrix} -\sin(t/2) \\ \cos(t/2) \\ 0 \end{pmatrix} +
                             \lambda_3 \begin{pmatrix} 0 \\ 0 \\ \e^{t - \cos t} \end{pmatrix}
                         </me></p>
-                    </li>
-                </ol>
         </solution>
+        </task>
     </exercise>
 
 
     <exercise xml:id="solutions-bornees">
         <title>Solutions bornées d'une équation différentielle linéaire à coefficients constants</title>
-        <statement>
+        <introduction>
         <p>
             Soit <m>A \in \mathcal M_d(\C)</m>. 
-            <ol>
-                <li><p>Montrer que l'application <m>t \longmapsto \e^{t A}</m> est bornée sur <m>\R</m> si et seulement si
+        </p>
+        </introduction>
+
+            <task>
+                <statement> 
+                    <p>Montrer que l'application <m>t \longmapsto \e^{t A}</m> est bornée sur <m>\R</m> si et seulement si
                     <ul>
                         <li><m>\forall \lambda \in \OPN{Sp}(A),\; \re \lambda \leq 0</m></li>
                         <li><m>\forall \lambda \in \OPN{Sp}(A),\; \re \lambda = 0 \Rightarrow \ker(A - \lambda I)^2 = \ker(A - \lambda I)</m></li>
                     </ul>
-                </p></li>
-                <li><p>Quelles sont les solutions <m>t \longmapsto \e^{tA}V</m> du système différentiel <m>X' = AX</m> qui sont bornées ?</p></li>
-            </ol>
-        </p>
-        </statement>
-        <solution>
-                <ol>
-                    <li><p>Considérons une formule de trigonalisation <m>A = PTP^{-1}</m> où
+                </p>
+                </statement>
+
+                <solution>
+                    <p>Considérons une formule de trigonalisation <m>A = PTP^{-1}</m> où
                         <me>
                             T = \begin{pmatrix}
                             \lambda_1 I_{\alpha_1} + N_1 \amp \amp \amp  \\ 
@@ -183,20 +185,31 @@
                         <me>
                             \e^{\lambda t} \e^{t N} = \sum_{k=0}^{p-1} \frac{t^k \e^{\lambda t}}{k!} N^k
                         </me>
-                        Puisque <m>|t^k \e^{\lambda t}| = t^k \e^{t \re \lambda}</m>, alors la fonction <m>t \longmapsto t^k \e^{\lambda t}</m> est bornée si et seulement si (<m>k \gt 0</m> et <m>\re \lambda \lt 0</m>) ou (<m>k = 0</m> et <m>\re \lambda \leq 0</m>). On en déduit que la fonction <m>t \longmapsto \e^{\lambda t} \e^{t N}</m> est bornée si et seulement si
+                        Puisque <m>|t^k \e^{\lambda t}| = t^k \e^{t \re \lambda}</m>, alors la fonction <m>t \longmapsto t^k \e^{\lambda t}</m> est bornée sur <m>\R</m> si et seulement si (<m>k \gt 0</m> et <m>\re \lambda \lt 0</m>) ou (<m>k = 0</m> et <m>\re \lambda \leq 0</m>). On en déduit que la fonction <m>t \longmapsto \e^{\lambda t} \e^{t N}</m> est bornée si et seulement si
                         <me>
-                            (N = 0 \text{ et } \re \lambda = 0) \text{ ou } (N \ne 0 \text{ et } \re \lambda \lt 0)
+                            (N = 0 \text{ et } \re \lambda \leqslant 0) \text{ ou } (N \ne 0 \text{ et } \re \lambda \lt 0)
                         </me>
                         Et finalement, l'application <m>t \longmapsto \e^{tA}</m> est bornée si et seulement si
                         <me>
-                            \forall k \in \iic{1, r},\; \re \lambda_k \leq 0 \quad \text{et} \quad \forall k \in \iic{1, r},\; \re \lambda_k = 0 \Rightarrow N_k = 0
-                        </me></p>
-                    </li>
-                    <li><p>Soit <m>V \in \mathcal M_{n,1}(\C)</m> et considérons la solution <m>f : t \longmapsto \e^{tA} V</m>. Décomposons <m>V</m> sous la forme <m>V = V_1 + V_2 + \cdots + V_r</m> où pour tout <m>k \in \iic{1, r}</m>, <m>V_k \in \ker(A - \lambda_k I)^{\alpha_k}</m>. On peut poser pour tout <m>k \in \iic{1, r}</m>
-                        <me>
-                            V_k = P \begin{pmatrix} 0 \\ \vdots \\ W_k \\ \vdots \\ 0 \end{pmatrix}
+                            \forall k \in \iic{1, r},\; 
+                            \begin{cases} \re \lambda_k \leq 0 \\ \re \lambda_k = 0 \Rightarrow N_k = 0
+                            \end{cases}
                         </me>
-                        On a alors pour tout <m>t \in \R</m>,
+                        sachant que la condition <m>N_k=0</m> équivaut à <m>\ker(A-\lambda_kI)^{\alpha_k}=\ker(A-\lambda_kI)</m> ou encore que le sous-espace propre de <m>A</m> en <m>\lambda_k</m> est égal à son sous-espace caractéristique.
+                    </p>
+                </solution>
+                </task>
+
+                <task>  
+                <statement>
+                    <p>Quelles sont les solutions <m>t \longmapsto \e^{tA}V</m> du système différentiel <m>X' = AX</m> qui sont bornées ?</p>
+                </statement> 
+                <solution>
+                    <p>Soit <m>V \in \mathcal M_{n,1}(\C)</m> et considérons la solution <m>f : t \longmapsto \e^{tA} V</m>. Décomposons <m>V</m> sous la forme <m>V = V_1 + V_2 + \cdots + V_r</m> où pour tout <m>k \in \iic{1, r}</m>, <m>V_k \in \ker(A - \lambda_k I)^{\alpha_k}</m>. On peut poser pour tout <m>k \in \iic{1, r}</m>
+                        <me>
+                            V_k = P^{-1} \begin{pmatrix} 0 \\ \vdots \\ W_k \\ \vdots \\ 0 \end{pmatrix}
+                        </me>
+                        où <m>W_k\in\mathcal M_{\alpha_k,1}(\C)</m>. On a alors pour tout <m>t \in \R</m>,
                         <me>
                             f(t) = P \begin{pmatrix}
                             \e^{\lambda_1 t} \e^{t N_1} W_1 \\
@@ -221,9 +234,8 @@
                         </me>
                         où <m>I = \{k \in \iic{1, r} \;|\; \re \lambda_k \lt 0\}</m> et <m>J = \{k \in \iic{1, r} \;|\; \re \lambda_k = 0\}</m>.
                         </p>
-                    </li>
-                </ol>
-        </solution>
+                </solution>
+            </task>
     </exercise>
 
 
@@ -556,8 +568,8 @@
         </solution>
     </exercise>
 
-    <exercise xml:id="solutions-periodiques">
-        <title>Solutions périodiques d'une équation différentielle linéaire</title>
+    <exercise xml:id="a-antisymetrique">
+        <title>cas où <m>a(t)</m> est un endomorphisme antisymétrique</title>
         <p>
             On suppose que <m>E</m> est un espace euclidien. On considère une équation différentielle linéaire homogène
             <me>
@@ -601,63 +613,6 @@
         </solution>
     </exercise>
 
-    <exercise><title> Cas où les endomorphismes <m>a(t)</m> sont antisymétriques</title>
-        <statement>
-            <p>On suppose que <m>E</m> est un espace euclidien. On considère une <textsc>edl</textsc>
-                homogène</p>
-            <me>x'=a(t)\cdot x \qquad (H)</me>
-            <p>On suppose que pour tout <m>t\in I</m>, <m>a(t)</m> est un endomorphisme
-                antisymétrique.</p>
-            <ol>
-                <li>
-                    <p>Montrer que si <m>f</m> est une solution de <m>(H)</m> alors <m>t\longmapsto
-                        \nm{f(t)}</m> est constante.</p>
-                </li>
-                <li>
-                    <p>Soit <m>r</m> est une solution sur <m>I</m> de l'équation dite résolvante de <m>
-                        (H)</m> :</p>
-                    <me>u'=a(t)\circ u \qquad (RH)</me>
-                    <p>Montrer que s'il existe <m>t_0\in I</m> tel que <m>r(t_0)</m> soit inversible
-                        alors pour tout <m>(t,s)\in\R^2</m>, <m>r(t)\circ \big(r(s)\big)^{-1}</m>
-                        est une isométrie de <m>E</m>.</p>
-                </li>
-            </ol>
-        </statement>
-        <solution>
-            <ol>
-                <li>
-                    <p>Soit <m>f</m> une solution de <m>(H)</m> sur <m>I</m>. La fonction <m>\rho:t\longmapsto
-                        \nm{f(t)}^1</m> est alors de classe <m>\mathcal C^1</m> sur <m>I</m> et on a</p>
-                    <me>\rho'(t)=2\langle f(t),f'(t)\rangle =2\langle f(t),a(t)\cdot f(t)\rangle=0</me>
-                    <p>Donc <m>\rho</m> est constante sur <m>I</m>. Ce qui implique que la fonction <m>t\longmapsto
-                        \nm{f(t)}</m> est constante sur <m>I</m>.</p>
-                </li>
-                <li>
-                    <p>Posons pour tout <m>v\in E</m>, <m>f_v(t)=r(t)\cdot v</m>. La fonction <m>f_v</m>
-                        est dérivable et</p>
-                    <me>f_v'(t)=r'(t)\cdot v=a(t)\circ r(t)\cdot v=a(t)\cdot f_v(t)</me>
-                    <p>Donc <m>f_v</m> est une solution de <m>x'=a(t)\cdot v</m>. Soit maintenant <m>
-                        (v_1,v_2,\ldots,v_d)</m> une base de <m>E</m>. Pour tout <m>k\in\iic{1,d}</m>
-                        on a <m>f_{v_k}(t_0)=r(t_0)\cdot v_k</m> et comme <m>r(t_0)</m> est
-                        inversible alors <m>(f_{v_1}(t_0),\ldots,f_{v_d}(t_0))</m> est une base de <m>
-                        E</m>. La famille <m>(f_{v_1},\cdots,f_{v_d})</m> est donc un <textsc>sfs</textsc>
-                        de <m>(H)</m>. La famille <m>(r(t)\cdot v_1,\ldots,r(t)\cdot v_d)</m> est
-                        ainsi une base de <m>E</m> pour tout <m>t\in I</m>. Ce qui implique que <m>
-                        r(t)</m> est inversible pour tout <m>t\in I</m>.</p>
-                    <p>Par ailleurs pour tout <m>s\in I</m> fixé, il est immédiat que la fonction <m>t\longmapsto
-                        r(t)\circ r(s)^{-1}</m> est une solution de <m>(RH)</m>. Donc pour tout <m>v\in
-                        E</m> la fonction</p>
-                    <me>t\longmapsto r(t)\circ r(s)^{-1}\cdot v</me>
-                    <p>est une solution de <m>(H)</m>. La fonction <m>t\longmapsto \nm{r(t)\circ
-                        r(s)^{-1}\cdot v}</m> est donc constante. Pour <m>t=s</m> elle prend la
-                        valeur <m>\nm{v}</m> donc</p>
-                    <me>\forall t\in I,\; \nm{r(t)\circ r(s)^{-1}\cdot v}=\nm{v}</me>
-                    <p>Ceci pour tout <m>v\in E</m>. Alors <m>r(t)\circ r(s)^{-1}</m> est une
-                        isométrie de <m>E</m> pour tous <m>t,s\in I</m>.</p>
-                </li>
-            </ol>
-        </solution>
-    </exercise>
 
     <exercise xml:id="sysdiff-solutions-periodiques">
     <title> Solutions périodiques d'un système différentiel périodique </title>
@@ -1194,6 +1149,9 @@
                         t_2</m>.</p>
                 </li>
             </ol>
+            <p>
+                Voir la section <xref ref="sec-zeros-des-solutions"/> pour plus de résulats sur ce thème.
+            </p>
         </statement>
         <solution>
             <ol>
@@ -1270,7 +1228,7 @@
             </li>
             <li>
                 <p>Montrer que <m>(H)</m> admet au moins une solution non nulle <m>f</m> telle que <m>
-                    f(t+T)=-f(t)</m> si et seulement si <m>f_1(T)+f_2'(t)=-2</m>.</p>
+                    f(t+T)=-f(t)</m> si et seulement si <m>f_1(T)+f_2'(T)=-2</m>.</p>
             </li>
         </ol>
     </statement>

@@ -14,8 +14,8 @@
 <article class="exercise exercise-like"><h3 class="heading">
 <span class="type">Exercice</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Expression des solutions quand <span class="process-math">\(a(t) \circ a(s) = a(s) \circ a(t)\)</span>.</span>
 </h3>
-<ol class="lower-alpha lower-alpha-level-1" id="expression-solutions-commutatives-2-1">
-<li><div class="para logical">
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical">
 <div class="para">On considère une <abbr class="acronym">EDL</abbr> du premier ordre homogène</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -29,18 +29,8 @@ t \longmapsto \exp\bigg(\int_{t_0}^t a(s) \, ds\bigg) \cdot v
 \end{equation*}
 </div>
 <div class="para">où <span class="process-math">\(v\)</span> est un vecteur quelconque de <span class="process-math">\(E\text{.}\)</span> Quel est l’unique solution de <span class="process-math">\((H)\)</span> telle que <span class="process-math">\(f(t_0) = x_0\)</span> lorsque <span class="process-math">\(x_0 \in E\)</span> est donnée ?</div>
-</div></li>
-<li><div class="para logical">
-<div class="para">Résoudre sur <span class="process-math">\(\R\)</span> le système différentiel <span class="process-math">\(X' = A(t)X\)</span> lorsque</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A(t) = \begin{pmatrix} 0 \amp  1/2 \amp  0 \\ -1/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 + \sin t \end{pmatrix}
-\end{equation*}
 </div>
-</div></li>
-</ol>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha lower-alpha-level-1" id="expression-solutions-commutatives-3-1">
-<li><div class="para logical">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
 <div class="para">Soit <span class="process-math">\(v \in E\)</span> et considérons les fonctions</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -63,8 +53,16 @@ f'(t) = A'(t) \circ \e^{A(t)} \cdot v = a(t) \cdot f(t)
 </div>
 <div class="para">La fonction <span class="process-math">\(f\)</span> est donc une solution de <span class="process-math">\((H)\text{.}\)</span> C’est l’unique solution de <span class="process-math">\((H)\)</span> qui vérifie <span class="process-math">\(f(t_0) = v\text{.}\)</span> Le vecteur <span class="process-math">\(v\)</span> étant quelconque dans <span class="process-math">\(E\text{,}\)</span> cela prouve que toutes les solutions de <span class="process-math">\((H)\)</span> sont de la forme de <span class="process-math">\(f\text{.}\)</span>
 </div>
-</div></li>
-<li><div class="para logical">
+</div></div></details></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical">
+<div class="para">Résoudre sur <span class="process-math">\(\R\)</span> le système différentiel <span class="process-math">\(X' = A(t)X\)</span> lorsque</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(t) = \begin{pmatrix} 0 \amp  1/2 \amp  0 \\ -1/2 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 + \sin t \end{pmatrix}
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
 <div class="para">La condition <span class="process-math">\(A(t)A(s) = A(s)A(t)\)</span> est bien vérifiée et on a</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -90,7 +88,6 @@ t \longmapsto \lambda_1 \begin{pmatrix} \cos(t/2) \\ \sin(t/2) \\ 0 \end{pmatrix
 \lambda_3 \begin{pmatrix} 0 \\ 0 \\ \e^{t - \cos t} \end{pmatrix}
 \end{equation*}
 </div>
-</div></li>
-</ol></div></details></div></article><span class="incontext"><a class="internal" href="sec-eqdiff-exerises-approfondissement.html#expression-solutions-commutatives">Contexte</a></span>
+</div></div></details></div></article></article><span class="incontext"><a class="internal" href="sec-eqdiff-exerises-approfondissement.html#expression-solutions-commutatives">Contexte</a></span>
 </body>
 </html>
